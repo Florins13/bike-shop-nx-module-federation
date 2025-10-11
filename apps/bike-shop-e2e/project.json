@@ -1,0 +1,9 @@
+{
+  "name": "bike-shop-e2e",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "sourceRoot": "apps/bike-shop-e2e/src",
+  "implicitDependencies": ["bike-shop"],
+  "// targets": "to see all targets run: nx show project bike-shop-e2e --web",
+  "targets": {}
+}

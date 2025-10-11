@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, computed, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, computed, OnInit, inject } from '@angular/core';
 import { FormGroup, FormBuilder, Validators, ReactiveFormsModule } from '@angular/forms';
 import { OrderService } from '../order.service';
 import { CartService } from '../../cart/cart.service';
@@ -27,7 +27,11 @@ export class CheckoutComponent implements OnInit {
 
   checkoutForm: FormGroup;
 
-  constructor(private fb: FormBuilder, private orderService: OrderService, private cartService: CartService) {
+  fb = inject(FormBuilder);
+  orderService = inject(OrderService);
+  cartService = inject(CartService);
+
+  constructor() {
     this.checkoutForm = this.fb.group({
       fullName: ['', Validators.required],
       address: ['', Validators.required],

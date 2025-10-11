@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 
 
@@ -10,10 +10,11 @@ import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angula
     changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class LoginComponent {
+  fb = inject(FormBuilder);
   loginForm: FormGroup;
   message: string | null = null;
 
-  constructor(private fb: FormBuilder) {
+  constructor() {
     this.loginForm = this.fb.group({
       username: ['', Validators.required],
       password: ['', Validators.required]

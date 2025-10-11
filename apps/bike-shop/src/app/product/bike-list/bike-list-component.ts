@@ -14,7 +14,7 @@ import { CartService } from '../../cart/cart.service';
 })
 export class BikeListComponent implements OnInit{
   role: 'BASIC' | 'MANAGER' | 'GUEST' = 'BASIC';
-  searchTerm: string = '';
+  searchTerm = '';
 
   bikeService = inject(BikeService);
   cartService = inject(CartService);

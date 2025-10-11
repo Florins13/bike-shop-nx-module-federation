@@ -1,39 +1,48 @@
 <header class="header_bar">
   <div>
-    <img 
-      (click)="goToBikes()" 
-      src="bicycle.png" 
-      style="cursor: pointer; height:70px; width:70px;" 
-      alt="Bikes"
-    >
+    <button class="icon-button" (click)="goToBikes()" aria-label="Bikes">
+      <img src="bicycle.png" style="height:70px; width:70px;" alt="Bikes">
+    </button>
   </div>
 
-  <div (click)="goToBikes()">
-    <h1>Bicycles</h1>
+  <div>
+    <button class="text-button" (click)="goToBikes()"><h1>Bicycles</h1></button>
   </div>
 
   <nav class="nav-style" style="display: flex; align-items: center;">
     
     @if (role === 'BASIC') {
       <div>
-        <img (click)="goToOrders()" src="orders.png" alt="Orders">
+        <button class="icon-button" (click)="goToOrders()" aria-label="Orders">
+          <img src="orders.png" alt="Orders">
+        </button>
       </div>
       <div>
-        <img (click)="goToCart()" src="shopping-cart.png" alt="Cart">
+        <button class="icon-button" (click)="goToCart()" aria-label="Cart">
+          <img src="shopping-cart.png" alt="Cart">
+        </button>
       </div>
       <div>
-        <img (click)="logOut()" src="logout.png" alt="Logout">
+        <button class="icon-button" (click)="logOut()" aria-label="Logout">
+          <img src="logout.png" alt="Logout">
+        </button>
       </div>
     } @else if (role === 'MANAGER') {
       <div>
-        <img (click)="logOut()" src="logout.png" alt="Logout">
+        <button class="icon-button" (click)="logOut()" aria-label="Logout">
+          <img src="logout.png" alt="Logout">
+        </button>
       </div>
     } @else {
       <div>
-        <img (click)="logIn()" src="login.png" alt="Login">
+        <button class="icon-button" (click)="logIn()" aria-label="Login">
+          <img src="login.png" alt="Login">
+        </button>
       </div>
       <div>
-        <img src="add-user.png" alt="Register">
+        <button class="icon-button" aria-label="Register">
+          <img src="add-user.png" alt="Register">
+        </button>
       </div>
     }
 

@@ -1,0 +1,64 @@
+<h1 style="margin-left: 5px">Checkout</h1>
+
+<div style="padding: 20px; display: flex; justify-content: space-around;">
+  <!-- Customer form -->
+  <div>
+    <form (ngSubmit)="finaliseOrder()" [formGroup]="checkoutForm" style="display: flex; flex-direction: column; align-items: baseline; gap: 5px;">
+      <label for="fullName">Full name</label>
+      <input id="fullName" formControlName="fullName" required type="text"/>
+
+      <label for="address">Address</label>
+      <input id="address" formControlName="address" required type="text"/>
+
+      <label for="telephone">Telephone</label>
+      <input id="telephone" formControlName="telephone" required type="number"/>
+
+      <label for="zipCode">Zipcode</label>
+      <input id="zipCode" formControlName="zipCode" required type="text"/>
+
+      <div>
+        <label for="buy">Buy</label>
+        <input type="radio" id="buy" formControlName="acquire" value="buy" checked />
+
+        <label for="rent">Rent for 3 days</label>
+        <input type="radio" id="rent" formControlName="acquire" value="rent" />
+      </div>
+
+      <button type="submit" style="align-self: end;">Finalise</button>
+    </form>
+  </div>
+
+  <!-- Order summary -->
+  <div>
+    <table>
+      <tr>
+        <th>Bike</th>
+        <th>Quantity</th>
+        <th>Price</th>
+      </tr>
+
+      @for (cartItem of cartItems(); track cartItem.id) {
+        <tr>
+          <td>{{ cartItem.bike.model }}</td>
+          <td>{{ cartItem.quantity }}</td>
+          <td>{{ cartItem.bike.price }} €</td>
+        </tr>
+      }
+
+      <tr>
+        <td></td>
+        <td style="text-align: end; font-weight: bold;">Total:</td>
+        <td style="font-weight: bold;">
+          @if (acquireMode === 'buy') {
+            {{ cartTotal() }} €
+          } @else {
+            {{ rentTotal() }} €
+          }
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>
+
+<!-- Order history -->
+<app-order-history></app-order-history>

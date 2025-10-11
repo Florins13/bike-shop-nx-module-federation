@@ -1,0 +1,33 @@
+<div>
+  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+    <div class="container">
+      <label for="username"><b>Username</b></label>
+      <input
+        id="username"
+        type="text"
+        placeholder="Enter Username"
+        formControlName="username"
+        required
+      >
+
+      <label for="password"><b>Password</b></label>
+      <input
+        id="password"
+        type="password"
+        placeholder="Enter Password"
+        formControlName="password"
+        required
+      >
+
+      <button type="submit">Login</button>
+    </div>
+  </form>
+</div>
+
+@if (message) {
+  <p style="color: red; display: flex; justify-content: center;">
+    {{ message }}
+  </p>
+}
+
+

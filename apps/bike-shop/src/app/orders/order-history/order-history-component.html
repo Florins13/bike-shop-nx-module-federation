@@ -1,0 +1,37 @@
+<div style="padding-left: 10px">
+  <h3>Order history:</h3>
+  <table style="width: 100%">
+    <tr>
+      <th>Transaction</th>
+      <th>Order state</th>
+      <th>Acquire Type</th>
+      <th>Items:</th>
+      <th>Total</th>
+      <th>Address</th>
+      <th>User</th>
+    </tr>
+
+    @for (order of orders(); track order.transaction) {
+      <tr>
+        <td>{{ order.transaction }}</td>
+        <td>{{ order.orderState }}</td>
+        <td>{{ order.acquireType }}</td>
+        <td style="display: flex; flex-direction: column;">
+          @for (item of order.shippingItems; track item.id) {
+            <span>{{ item.quantity }}x {{ item.bike.model }}</span>
+          }
+        </td>
+        <td>{{ order.totalPrice }} €</td>
+        <td>
+          <span>
+            {{ order.shippingAddress.fullName }},
+            {{ order.shippingAddress.address }},
+            {{ order.shippingAddress.telephone }}.
+            {{ order.shippingAddress.zipCode }}
+          </span>
+        </td>
+        <td>{{ order.username }}</td>
+      </tr>
+    }
+  </table>
+</div>

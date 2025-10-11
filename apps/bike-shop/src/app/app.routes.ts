@@ -6,7 +6,7 @@ import { ShoppingView } from './shopping-view/shopping-view';
 
 export const routes: Routes = [
     { path: 'login', component: LoginComponent},
-    { path: 'shop', component: ShoppingView },
+    { path: '', component: ShoppingView },
     { path: 'checkout', component: CheckoutComponent },
     { path: 'orders', component: OrderHistoryComponent },
 ];

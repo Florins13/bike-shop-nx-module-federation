@@ -20,6 +20,10 @@ export default [
               sourceTag: '*',
               onlyDependOnLibsWithTags: ['*'],
             },
+            {
+              sourceTag: 'scope:cart',
+              onlyDependOnLibsWithTags: ['scope:demo-lib'],
+            },
           ],
         },
       ],

@@ -15,7 +15,13 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@bike-shop-nx-module-federation/demo-lib": ["libs/demo-lib/src/index.ts"]
+      "@bike-shop-nx-module-federation/bike-shop/src/app/*": [
+        "apps/bike-shop/src/app/*"
+      ],
+      "@bike-shop-nx-module-federation/demo-lib": [
+        "libs/demo-lib/src/index.ts"
+      ],
+      "orders/Orders": ["apps/orders/src/app/entry.routes.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

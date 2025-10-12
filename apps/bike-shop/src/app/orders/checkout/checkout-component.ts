@@ -1,8 +1,19 @@
-import { ChangeDetectionStrategy, Component, computed, OnInit, inject } from '@angular/core';
-import { FormGroup, FormBuilder, Validators, ReactiveFormsModule } from '@angular/forms';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  computed,
+  OnInit,
+  inject,
+} from '@angular/core';
+import {
+  FormGroup,
+  FormBuilder,
+  Validators,
+  ReactiveFormsModule,
+} from '@angular/forms';
 import { OrderService } from '../order.service';
 import { CartService } from '../../cart/cart.service';
-import { OrderHistoryComponent } from "../order-history/order-history-component";
+import { OrderHistoryComponent } from '../order-history/order-history-component';
 import { OrderRequest } from '../order.models';
 
 @Component({
@@ -10,17 +21,23 @@ import { OrderRequest } from '../order.models';
   imports: [ReactiveFormsModule, OrderHistoryComponent],
   templateUrl: './checkout-component.html',
   styleUrl: './checkout-component.scss',
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class CheckoutComponent implements OnInit {
   cartItems = computed(() => this.cartService.cartState()?.cartItems);
 
   cartTotal = computed(() =>
-    this.cartItems()?.reduce((sum, item) => sum + item.bike.price * item.quantity, 0)
+    this.cartItems()?.reduce(
+      (sum, item) => sum + item.bike.price * item.quantity,
+      0
+    )
   );
 
   rentTotal = computed(() =>
-    this.cartItems()?.reduce((sum, item) => sum + (item.bike.price * item.quantity * 0.3), 0)
+    this.cartItems()?.reduce(
+      (sum, item) => sum + item.bike.price * item.quantity * 0.3,
+      0
+    )
   );
 
   acquireMode: 'buy' | 'rent' = 'buy';
@@ -37,9 +54,8 @@ export class CheckoutComponent implements OnInit {
       address: ['', Validators.required],
       telephone: ['', [Validators.required, Validators.pattern(/^[0-9]+$/)]],
       zipCode: ['', Validators.required],
-      acquire: [this.acquireMode]
+      acquire: [this.acquireMode],
     });
-
   }
   ngOnInit(): void {
     if (!this.cartService.cartState()) {
@@ -51,8 +67,9 @@ export class CheckoutComponent implements OnInit {
     if (this.checkoutForm.valid) {
       const orderRequest: OrderRequest = {
         shippingAddress: this.checkoutForm.value,
-        acquireType: this.acquireMode
+        acquireType: this.acquireMode,
       };
+
       this.orderService.finaliseOrder(orderRequest).subscribe({
         next: () => {
           this.orderService.loadOrderHistory();
@@ -61,9 +78,8 @@ export class CheckoutComponent implements OnInit {
         },
         error: (error) => {
           console.error('Error finalising order:', error);
-        }
+        },
       });
     }
   }
 }
-

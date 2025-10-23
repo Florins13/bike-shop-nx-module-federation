@@ -1,5 +1,11 @@
 # BikeShopNxModuleFederation
 
+## Backend API
+In order to have the frontend part working you have to build and run the API from this branch:
+https://github.com/Florins13/software-engineering/tree/backend-rest-api
+
+## Nx ->
+
 <a alt="Nx logo" href="https://nx.dev" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png" width="45"></a>
 
 ✨ Your new, shiny [Nx workspace](https://nx.dev) is almost ready ✨.

@@ -17,10 +17,10 @@ via **Module Federation** and **Angular Elements** (no shared dependencies).
 Install dependencies for each MFE:
 
 ```bash
-cd mfe/shell && npm install
-cd mfe/cart && npm install
-cd mfe/bikes && npm install
-cd mfe/orders && npm install
+cd isolated-mfe/shell && npm install
+cd isolated-mfe/cart && npm install
+cd isolated-mfe/bikes && npm install
+cd isolated-mfe/orders && npm install
 ```
 
 ## Development
@@ -29,20 +29,20 @@ Start each MFE in a separate terminal:
 
 ```bash
 # Terminal 1 - Remotes first
-cd mfe/cart && npm start
+cd isolated-mfe/cart && npm start
 # Terminal 2
-cd mfe/bikes && npm start
+cd isolated-mfe/bikes && npm start
 # Terminal 3
-cd mfe/orders && npm start
+cd isolated-mfe/orders && npm start
 # Terminal 4 - Host last
-cd mfe/shell && npm start
+cd isolated-mfe/shell && npm start
 ```
 
 ## Production Build
 
 ```bash
-chmod +x mfe/build-all.sh
-./mfe/build-all.sh
+chmod +x isolated-mfe/build-all.sh
+./isolated-mfe/build-all.sh
 ```
 
 ## How It Works

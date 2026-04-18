@@ -2,7 +2,7 @@ import { ChangeDetectionStrategy, Component, CUSTOM_ELEMENTS_SCHEMA, OnInit } fr
 
 @Component({
   selector: 'app-checkout-wrapper',
-  template: '<mfe-orders></mfe-orders>',
+  template: '<isolated-mfe-orders></isolated-mfe-orders>',
   changeDetection: ChangeDetectionStrategy.OnPush,
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })

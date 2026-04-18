@@ -1,0 +1,429 @@
+- Generating browser application bundles (phase: setup)...
+[1m[33m    TypeScript compiler options "target" and "useDefineForClassFields" are set to "ES2022" and "false" respectively by the Angular CLI. To control ECMA version and features use the Browserslist configuration. For more information, see https://angular.dev/tools/cli/build#configuring-browser-compatibility
+    NOTE: You can set the "target" to "ES2022" in the project's tsconfig to remove this warning.[39m[22m
+[1m[33mCould not find a version for "@angular/animations" in the root "package.json" when collecting shared packages for the Module Federation setup. The package will not be shared.[39m[22m
+[1m[33mCould not find a version for "@nx/module-federation" in the root "package.json" when collecting shared packages for the Module Federation setup. The package will not be shared.[39m[22m
+<w> [Module Federation Manifest Plugin] [36m[ Module Federation Manifest Plugin ][39m Manifest will use absolute path resolution via its host at runtime, reason: publicPath='auto'
+(node:17566) [DEP0180] DeprecationWarning: fs.Stats constructor is deprecated.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+    [webpack.cache.PackFileCacheStrategy] No pack exists at /Users/ctw00585/jonas-projects/bike-shop-nx-module-federation/.angular/cache/21.2.7/angular-webpack/f1217f2c28aeaf226775c86ba92860400d4e4e9f.pack: Error: ENOENT: no such file or directory, stat '/Users/ctw00585/jonas-projects/bike-shop-nx-module-federation/.angular/cache/21.2.7/angular-webpack/f1217f2c28aeaf226775c86ba92860400d4e4e9f/index.pack'
+<t> [webpack.cache.PackFileCacheStrategy] restore cache container: 7.934792 ms
+    [IdleFileCachePlugin] Initial cache was generated and cache will be persisted in 5s.
+[32m✔[39m Browser application bundle generation complete.
+    [webpack.cache.PackFileCacheStrategy] Pack got invalid because of write to: Compilation/modules|container entry (default) [["./BikeListComponent",{"import":["apps/bikes/src/app/product/bike-list/bike-list-component.ts"],"name":"__federation_expose_BikeListComponent"}]] /Users/ctw00585/jonas-projects/bike-shop-nx-module-federation/node_modules/.federation/entry.c00d6359719cec5767687dfcb8aa19a7.js undefined
+[37masset node_modules_angular_core_fesm2022_core_mjs.js 1.16 MiB {node_modules_angular_core_fesm2022_core_mjs} [emitted] [javascript module] 1 related asset
+asset polyfills.js 426 KiB {polyfills} [emitted] [javascript module] (name: polyfills) 1 related asset
+asset main.js 339 KiB {main} [emitted] [javascript module] (name: main) 1 related asset
+asset remoteEntry.mjs 337 KiB {bikes} [emitted] [javascript module] (name: bikes) 1 related asset
+asset default-node_modules_rxjs_dist_esm_internal_operators_auditTime_js-node_modules_rxjs_dist_esm-9f2bd5.js 303 KiB {default-node_modules_rxjs_dist_esm_internal_operators_auditTime_js-node_modules_rxjs_dist_esm-9f2bd5} [emitted] [javascript module] (id hint: default) 1 related asset
+asset default-node_modules_angular_router_fesm2022_router_mjs.js 263 KiB {default-node_modules_angular_router_fesm2022_router_mjs} [emitted] [javascript module] (id hint: default) 1 related asset
+asset default-node_modules_angular_common_fesm2022_common_mjs.js 209 KiB {default-node_modules_angular_common_fesm2022_common_mjs} [emitted] [javascript module] (id hint: default) 1 related asset
+asset default-node_modules_angular_forms_fesm2022_forms_mjs.js 172 KiB {default-node_modules_angular_forms_fesm2022_forms_mjs} [emitted] [javascript module] (id hint: default) 1 related asset
+asset default-node_modules_angular_common_fesm2022_http_mjs.js 105 KiB {default-node_modules_angular_common_fesm2022_http_mjs} [emitted] [javascript module] (id hint: default) 1 related asset
+asset node_modules_rxjs_dist_esm_index_js.js 97.6 KiB {node_modules_rxjs_dist_esm_index_js} [emitted] [javascript module] 1 related asset
+asset default-node_modules_angular_platform-browser_fesm2022_platform-browser_mjs.js 71.6 KiB {default-node_modules_angular_platform-browser_fesm2022_platform-browser_mjs} [emitted] [javascript module] (id hint: default) 1 related asset
+asset node_modules_rxjs_dist_esm_operators_index_js.js 34 KiB {node_modules_rxjs_dist_esm_operators_index_js} [emitted] [39m[37m[javascript module] 1 related asset
+asset common.js 27.3 KiB {common} [emitted] [javascript module] (name: common) (id hint: common) 1 related asset
+asset default-node_modules_angular_core_fesm2022__untracked-chunk_mjs-node_modules_angular_core_fes-2212f0.js 20.9 KiB {default-node_modules_angular_core_fesm2022__untracked-chunk_mjs-node_modules_angular_core_fes-2212f0} [emitted] [javascript module] (id hint: default) 1 related asset
++ 4 assets
+Entrypoint bikes 337 KiB (404 KiB) = remoteEntry.mjs 1 auxiliary asset
+Entrypoint main 339 KiB (404 KiB) = main.js 1 auxiliary asset
+Entrypoint polyfills 426 KiB (594 KiB) = polyfills.js 1 auxiliary asset
+Entrypoint styles 1.5 KiB (266 bytes) = styles.css 1 auxiliary asset
+chunk {apps_bikes_src_bootstrap_ts} (runtime: main) apps_bikes_src_bootstrap_ts.js (bootstrap) 862 bytes (javascript) 42 bytes (consume-shared) [rendered]
+  dependent modules 585 bytes (javascript) 42 bytes (consume-shared) [dependent] 3 modules
+  ./apps/bikes/src/bootstrap.ts [2466] 277 bytes {apps_bikes_src_bootstrap_ts} [built] [code generated]
+    [used exports unknown]
+    import() ./bootstrap [6191] ./apps/bikes/src/main.ts 3:0-21
+chunk {bikes} (runtime: bikes) remoteEntry.mjs (bikes) 190 KiB (javascript) 420 bytes (share-init) 27 KiB (runtime) [entry] [rendered]
+  dependent modules 186 KiB [dependent] 76 modules
+  runtime modules 27 KiB 18 modules
+  + 13 chunk modules
+chunk {common} (runtime: bikes, main, polyfills, styles) common.js (common) (id hint: common) 14.4 KiB [rendered] split chunk (cache group: common) (name: common)
+  dependent modules 1.51 KiB [dependent] 2 modules
+  ./apps/bikes/src/app/product/bike-list/bike-list-component.ts [9669] 6.62 KiB {common} [built] [code generated]
+    [used exports unknown]
+    harmony side effect evaluation ./product/bike-list/bike-list-component [9607] ./apps/bikes/src/app/app.routes.ts 1:0-76
+    harmony import specifier ./product/bike-list/bike-list-component [9607] ./apps/bikes/src/app/app.routes.ts 4:13-[39m[37m30
+    harmony side effect evaluation ./app/product/bike-list/bike-list-component [2466] ./apps/bikes/src/bootstrap.ts 3:0-80
+    harmony import specifier ./app/product/bike-list/bike-list-component [2466] ./apps/bikes/src/bootstrap.ts 4:21-38
+    container exposed apps/bikes/src/app/product/bike-list/bike-list-component.ts [7585] container entry ./BikeListComponent[0]
+  ./node_modules/@angular/core/fesm2022/primitives-di.mjs [8513] 537 bytes {common} [built] [code generated]
+    [used exports unknown]
+    consume shared fallback @angular/core/primitives/di [6360] consume shared module (default) @angular/core/primitives/di@~1...2...9 (strict) (singleton) (fallback: ./node_modules/@angular/core/fesm2022/primitives-di.mjs)
+    provide module for shared /Users/ctw00585/jonas-projects/bike-shop-nx-module-federation/node_modules/@angular/core/fesm2022/primitives-di.mjs [8019] provide shared module (default) @angular/core/primitives/di@21.2.9 = ./node_modules/@angular/core/fesm2022/primitives-di.mjs
+  ./node_modules/@angular/core/fesm2022/primitives-signals.mjs [6699] 5.74 KiB {common} [built] [code generated]
+    [used exports unknown]
+    consume shared fallback @angular/core/primitives/signals [9778] consume shared module (default) @angular/core/primitives/signals@~1...2...9 (strict) (singleton) (fallback: ./node_modules/@angular/core/fesm2022/primitives-signals.mjs)
+    provide module for shared /Users/ctw00585/jonas-projects/bike-shop-nx-module-federation/node_modules/@angular/core/fesm2022/primitives-signals.mjs [1651] provide shared module (default) @angular/core/primitives/signals@21.2.9 = ./node_modules/@angular/core/fesm2022/primitives-signals.mjs
+chunk {default-node_modules_angular_common_fesm2022_common_mjs} (runtime: bikes, main, polyfills, styles) default-node_modules_angular_common_fesm2022_common_mjs.js (id hint: default) 169 KiB [rendered] split chunk (cache group: default)
+  dependent modules 110 KiB [dependent] 5 modules
+  ./node_modules/@angular/common[39m[37m/fesm2022/common.mjs [316] 58.9 KiB {default-node_modules_angular_common_fesm2022_common_mjs} [built] [code generated]
+    [used exports unknown]
+    consume shared fallback @angular/common [3060] consume shared module (default) @angular/common@~1...2...9 (strict) (singleton) (fallback: ./node_modules/@angular/common/fesm2022/common.mjs)
+    provide module for shared /Users/ctw00585/jonas-projects/bike-shop-nx-module-federation/node_modules/@angular/common/fesm2022/common.mjs [8225] provide shared module (default) @angular/common@21.2.9 = ./node_modules/@angular/common/fesm2022/common.mjs
+chunk {default-node_modules_angular_common_fesm2022_http_mjs} (runtime: bikes, main, polyfills, styles) default-node_modules_angular_common_fesm2022_http_mjs.js (id hint: default) 87.3 KiB [rendered] split chunk (cache group: default)
+  dependent modules 71.1 KiB [dependent] 3 modules
+  ./node_modules/@angular/common/fesm2022/http.mjs [6443] 16.2 KiB {default-node_modules_angular_common_fesm2022_http_mjs} [built] [code generated]
+    [used exports unknown]
+    consume shared fallback @angular/common/http [1152] consume shared module (default) @angular/common/http@~1...2...9 (strict) (singleton) (fallback: ./node_modules/@angular/common/fesm2022/http.mjs)
+    provide module for shared /Users/ctw00585/jonas-projects/bike-shop-nx-module-federation/node_modules/@angular/common/fesm2022/http.mjs [6305] provide shared module (default) @angular/common/http@21.2.9 = ./node_modules/@angular/common/fesm2022/http.mjs
+chunk {default-node_modules_angular_core_fesm2022__untracked-chunk_mjs-node_modules_angular_core_fes-2212f0} (runtime: bikes, main, polyfills, styles) default-node_modules_angular_core_fesm2022__untracked-chunk_mjs-node_modules_angular_core_fes-2212f0.js (id hint: default) 15.5 KiB [rendered] split chunk (cache group: default)
+  dependent modules 12.2 KiB [dependent] 1 module
+  ./node_modules/@angular/core/fesm2022/_untracked-chunk.mjs [1817] 3.11 KiB {default-node_modules_angula[39m[37mr_core_fesm2022__untracked-chunk_mjs-node_modules_angular_core_fes-2212f0} [built] [code generated]
+    [used exports unknown]
+    [inactive] harmony side effect evaluation ./_untracked-chunk.mjs [2260] ./node_modules/@angular/core/fesm2022/_resource-chunk.mjs 10:0-127
+    harmony import specifier ./_untracked-chunk.mjs [2260] ./node_modules/@angular/core/fesm2022/_resource-chunk.mjs 64:9-20
+    harmony import specifier ./_untracked-chunk.mjs [2260] ./node_modules/@angular/core/fesm2022/_resource-chunk.mjs 78:19-37
+    harmony import specifier ./_untracked-chunk.mjs [2260] ./node_modules/@angular/core/fesm2022/_resource-chunk.mjs 81:19-37
+    harmony import specifier ./_untracked-chunk.mjs [2260] ./node_modules/@angular/core/fesm2022/_resource-chunk.mjs 92:35-52
+    harmony import specifier ./_untracked-chunk.mjs [2260] ./node_modules/@angular/core/fesm2022/_resource-chunk.mjs 93:38-58
+    [inactive] harmony side effect evaluation ./_untracked-chunk.mjs [7580] ./node_modules/@angular/core/fesm2022/core.mjs 22:0-32
+    [inactive] harmony side effect evaluation ./_untracked-chunk.mjs [6699] ./node_modules/@angular/core/fesm2022/primitives-signals.mjs 9:0-112
+    harmony export imported specifier ./_untracked-chunk.mjs [6699] ./node_modules/@angular/core/fesm2022/primitives-signals.mjs 9:0-112
+    harmony export imported specifier ./_untracked-chunk.mjs [6699] ./node_modules/@angular/core/fesm2022/primitives-signals.mjs 9:0-112
+    harmony export imported specifier ./_untracked-chunk.mjs [6699] ./node_modules/@angular/core/fesm2022/primitives-signals.mjs 9:0-112
+    harmony export imported specifier ./_untracked-chunk.mjs [6699] ./node_modules/@angular/core/fesm2022/primitives-signals.mjs 9:0-112
+  ./node_modules/@angular/core/fesm2022/_weak_ref-chunk.mjs [6550] 180 bytes {default-node_modules_angular_core_fesm2022__untracked-chunk_mjs-node_modules_angular_core_fes-2212f0} [built] [code generated]
+    [used exports unknown]
+    [inactive] harmony side effect evaluation[39m[37m ./_weak_ref-chunk.mjs [7580] ./node_modules/@angular/core/fesm2022/core.mjs 16:0-92
+    harmony export imported specifier ./_weak_ref-chunk.mjs [7580] ./node_modules/@angular/core/fesm2022/core.mjs 16:0-92
+    [inactive] harmony side effect evaluation ./_weak_ref-chunk.mjs [6699] ./node_modules/@angular/core/fesm2022/primitives-signals.mjs 10:0-64
+    harmony export imported specifier ./_weak_ref-chunk.mjs [6699] ./node_modules/@angular/core/fesm2022/primitives-signals.mjs 10:0-64
+chunk {default-node_modules_angular_forms_fesm2022_forms_mjs} (runtime: bikes, main, polyfills, styles) default-node_modules_angular_forms_fesm2022_forms_mjs.js (id hint: default) 146 KiB [rendered] split chunk (cache group: default)
+  ./node_modules/@angular/forms/fesm2022/forms.mjs [4456] 146 KiB {default-node_modules_angular_forms_fesm2022_forms_mjs} [built] [code generated]
+    [used exports unknown]
+    consume shared fallback @angular/forms [8078] consume shared module (default) @angular/forms@~1...2...9 (strict) (singleton) (fallback: ./node_modules/@angular/forms/fesm2022/forms.mjs)
+    provide module for shared /Users/ctw00585/jonas-projects/bike-shop-nx-module-federation/node_modules/@angular/forms/fesm2022/forms.mjs [4038] provide shared module (default) @angular/forms@21.2.9 = ./node_modules/@angular/forms/fesm2022/forms.mjs
+chunk {default-node_modules_angular_platform-browser_fesm2022_platform-browser_mjs} (runtime: bikes, main, polyfills, styles) default-node_modules_angular_platform-browser_fesm2022_platform-browser_mjs.js (id hint: default) 55.7 KiB [rendered] split chunk (cache group: default)
+  dependent modules 35.2 KiB [dependent] 2 modules
+  ./node_modules/@angular/platform-browser/fesm2022/platform-browser.mjs [436] 20.6 KiB {default-node_modules_angular_platform-browser_fesm2022_platform-browser_mjs} [built] [code generated]
+    [used exports unknown]
+    consume shared fallback @angular/platform-browser [2053] consume shared module (default) @angular/platform-brows[39m[37mer@~1...2...9 (strict) (singleton) (fallback: ./node_modules/@angular/platform-browser/fesm2022/platform-browser.mjs)
+    provide module for shared /Users/ctw00585/jonas-projects/bike-shop-nx-module-federation/node_modules/@angular/platform-browser/fesm2022/platform-browser.mjs [4336] provide shared module (default) @angular/platform-browser@21.2.9 = ./node_modules/@angular/platform-browser/fesm2022/platform-browser.mjs
+chunk {default-node_modules_angular_router_fesm2022_router_mjs} (runtime: bikes, main, polyfills, styles) default-node_modules_angular_router_fesm2022_router_mjs.js (id hint: default) 215 KiB [rendered] split chunk (cache group: default)
+  dependent modules 213 KiB [dependent] 2 modules
+  ./node_modules/@angular/router/fesm2022/router.mjs [5072] 2.59 KiB {default-node_modules_angular_router_fesm2022_router_mjs} [built] [code generated]
+    [used exports unknown]
+    consume shared fallback @angular/router [1704] consume shared module (default) @angular/router@~1...2...9 (strict) (singleton) (fallback: ./node_modules/@angular/router/fesm2022/router.mjs)
+    provide module for shared /Users/ctw00585/jonas-projects/bike-shop-nx-module-federation/node_modules/@angular/router/fesm2022/router.mjs [6453] provide shared module (default) @angular/router@21.2.9 = ./node_modules/@angular/router/fesm2022/router.mjs
+chunk {default-node_modules_rxjs_dist_esm_internal_operators_auditTime_js-node_modules_rxjs_dist_esm-9f2bd5} (runtime: bikes, main, polyfills, styles) default-node_modules_rxjs_dist_esm_internal_operators_auditTime_js-node_modules_rxjs_dist_esm-9f2bd5.js (id hint: default) 142 KiB [rendered] split chunk (cache group: default)
+  dependent modules 93.4 KiB [dependent] 111 modules
+  + 77 chunk modules
+chunk {default-webpack_sharing_consume_default_angular_common_angular_common} (runtime: bikes, main, polyfills, styles) (id hint: default) 42 bytes split chunk (cache group: default)
+  consume shared module (default) @angular/common@~1...2...9 (strict) (sin[39m[37mgleton) ...(truncated) [3060] 42 bytes {default-webpack_sharing_consume_default_angular_common_angular_common} [built] [code generated]
+    [used exports unknown]
+    harmony side effect evaluation @angular/common [4456] ./node_modules/@angular/forms/fesm2022/forms.mjs 11:0-53
+    harmony import specifier @angular/common [4456] ./node_modules/@angular/forms/fesm2022/forms.mjs 118:20-27
+    harmony import specifier @angular/common [4456] ./node_modules/@angular/forms/fesm2022/forms.mjs 118:32-39
+    harmony side effect evaluation @angular/common [4967] ./node_modules/@angular/platform-browser/fesm2022/_browser-chunk.mjs 8:0-245
+    harmony import specifier @angular/common [4967] ./node_modules/@angular/platform-browser/fesm2022/_browser-chunk.mjs 12:32-43
+    harmony import specifier @angular/common [4967] ./node_modules/@angular/platform-browser/fesm2022/_browser-chunk.mjs 15:4-22
+    harmony import specifier @angular/common [4967] ./node_modules/@angular/platform-browser/fesm2022/_browser-chunk.mjs 68:11-28
+    harmony import specifier @angular/common [4967] ./node_modules/@angular/platform-browser/fesm2022/_browser-chunk.mjs 118:8-15
+    harmony import specifier @angular/common [4967] ./node_modules/@angular/platform-browser/fesm2022/_browser-chunk.mjs 174:13-20
+    harmony import specifier @angular/common [4967] ./node_modules/@angular/platform-browser/fesm2022/_browser-chunk.mjs 242:66-74
+    harmony import specifier @angular/common [4967] ./node_modules/@angular/platform-browser/fesm2022/_browser-chunk.mjs 256:13-21
+    harmony import specifier @angular/common [4967] ./node_modules/@angular/platform-browser/fesm2022/_browser-chunk.mjs 323:12-32
+    harmony import specifier @angular/common [4967] ./node_modules/@angular/platform-browser/fesm2022/_browser-chunk.mjs 329:11-19
+    harmony import specifier @angular/common [4967] ./node_modules/@angular/platform-browser/fesm2022/_browser-chunk.mjs 362:11-21
+    + 54 reasons
+chunk {default-webpack_sharing_consume_defa[39m[37mult_angular_common_http_angular_common_http} (runtime: bikes, main, polyfills, styles) (id hint: default) 42 bytes split chunk (cache group: default)
+  consume shared module (default) @angular/common/http@~1...2...9 (strict) (single...(truncated) [1152] 42 bytes {default-webpack_sharing_consume_default_angular_common_http_angular_common_http} [built] [code generated]
+    [used exports unknown]
+    harmony side effect evaluation @angular/common/http [1243] ./apps/bikes/src/app/app.config.ts 4:0-57
+    harmony import specifier @angular/common/http [1243] ./apps/bikes/src/app/app.config.ts 8:32-49
+    harmony side effect evaluation @angular/common/http [9186] ./apps/bikes/src/app/product/bike.service.ts 2:0-43
+    harmony import specifier @angular/common/http [9186] ./apps/bikes/src/app/product/bike.service.ts 13:64-77
+    harmony side effect evaluation @angular/common/http [436] ./node_modules/@angular/platform-browser/fesm2022/platform-browser.mjs 14:0-88
+    harmony import specifier @angular/common/http [436] ./node_modules/@angular/platform-browser/fesm2022/platform-browser.mjs 547:73-95
+    harmony import specifier @angular/common/http [436] ./node_modules/@angular/platform-browser/fesm2022/platform-browser.mjs 590:339-361
+chunk {default-webpack_sharing_consume_default_angular_core_angular_core} (runtime: bikes, main, polyfills, styles) (id hint: default) 42 bytes split chunk (cache group: default)
+  consume shared module (default) @angular/core@~1...2...9 (strict) (singleton) (f...(truncated) [8814] 42 bytes {default-webpack_sharing_consume_default_angular_core_angular_core} [built] [code generated]
+    [used exports unknown]
+    harmony side effect evaluation @angular/core [1243] ./apps/bikes/src/app/app.config.ts 1:0-95
+    harmony import specifier @angular/core [1243] ./apps/bikes/src/app/app.config.ts 6:14-48
+    harmony import specifier @angular/core [1243] ./apps/bikes/src/app/app.config.ts 6:52-78
+    harmony side effect evaluation @angular/core [9669] ./a[39m[37mpps/bikes/src/app/product/bike-list/bike-list-component.ts 1:0-39
+    harmony side effect evaluation @angular/core [9669] ./apps/bikes/src/app/product/bike-list/bike-list-component.ts 3:0-36
+    harmony import specifier @angular/core [9669] ./apps/bikes/src/app/product/bike-list/bike-list-component.ts 9:16-35
+    harmony import specifier @angular/core [9669] ./apps/bikes/src/app/product/bike-list/bike-list-component.ts 10:4-21
+    harmony import specifier @angular/core [9669] ./apps/bikes/src/app/product/bike-list/bike-list-component.ts 11:4-17
+    harmony import specifier @angular/core [9669] ./apps/bikes/src/app/product/bike-list/bike-list-component.ts 12:6-22
+    harmony import specifier @angular/core [9669] ./apps/bikes/src/app/product/bike-list/bike-list-component.ts 13:22-38
+    harmony import specifier @angular/core [9669] ./apps/bikes/src/app/product/bike-list/bike-list-component.ts 14:21-37
+    harmony import specifier @angular/core [9669] ./apps/bikes/src/app/product/bike-list/bike-list-component.ts 15:13-27
+    harmony import specifier @angular/core [9669] ./apps/bikes/src/app/product/bike-list/bike-list-component.ts 17:4-13
+    harmony import specifier @angular/core [9669] ./apps/bikes/src/app/product/bike-list/bike-list-component.ts 18:4-19
+    + 1818 reasons
+chunk {default-webpack_sharing_consume_default_angular_forms_angular_forms} (runtime: bikes, main) (id hint: default) 42 bytes split chunk (cache group: default)
+  consume shared module (default) @angular/forms@~1...2...9 (strict) (singleton) (...(truncated) [8078] 42 bytes {default-webpack_sharing_consume_default_angular_forms_angular_forms} [built] [code generated]
+    [used exports unknown]
+    harmony side effect evaluation @angular/forms [9669] ./apps/bikes/src/app/product/bike-list/bike-list-component.ts 2:0-66
+    harmony side effect evaluation @angular/forms [9669] ./apps/bikes/src/app/product/bike-list/bike-list-component.ts 5:0-37
+    harmony import specifier @angular/forms [9669] ./apps/[39m[37mbikes/src/app/product/bike-list/bike-list-component.ts 165:21-40
+    harmony import specifier @angular/forms [9669] ./apps/bikes/src/app/product/bike-list/bike-list-component.ts 165:42-65
+    harmony import specifier @angular/forms [9669] ./apps/bikes/src/app/product/bike-list/bike-list-component.ts 165:67-85
+    harmony import specifier @angular/forms [9669] ./apps/bikes/src/app/product/bike-list/bike-list-component.ts 165:87-98
+    harmony import specifier @angular/forms [9669] ./apps/bikes/src/app/product/bike-list/bike-list-component.ts 165:100-110
+chunk {default-webpack_sharing_consume_default_angular_platform-browser_angular_platform-browser} (runtime: bikes, main, polyfills, styles) (id hint: default) 42 bytes split chunk (cache group: default)
+  consume shared module (default) @angular/platform-browser@~1...2...9 (strict) (s...(truncated) [2053] 42 bytes {default-webpack_sharing_consume_default_angular_platform-browser_angular_platform-browser} [built] [code generated]
+    [used exports unknown]
+    harmony side effect evaluation @angular/platform-browser [2466] ./apps/bikes/src/bootstrap.ts 1:0-65
+    harmony import specifier @angular/platform-browser [2466] ./apps/bikes/src/bootstrap.ts 4:0-20
+    harmony side effect evaluation @angular/platform-browser [3305] ./node_modules/@angular/router/fesm2022/_router-chunk.mjs 13:0-48
+    harmony import specifier @angular/platform-browser [3305] ./node_modules/@angular/router/fesm2022/_router-chunk.mjs 3262:71-79
+    harmony import specifier @angular/platform-browser [3305] ./node_modules/@angular/router/fesm2022/_router-chunk.mjs 3277:10-18
+    harmony side effect evaluation @angular/platform-browser [5072] ./node_modules/@angular/router/fesm2022/router.mjs 13:0-35
+chunk {default-webpack_sharing_consume_default_rxjs_operators_rxjs_operators} (runtime: bikes, main, polyfills, styles) (id hint: default) 42 bytes split chunk (cache group: default)
+  consume shared module (default) rxjs/operators@!=7...8...0 (strict) ([39m[37msingleton) (fallback: ./node_modules/rxjs/dist/esm/opera...(truncated) [2814] 42 bytes {default-webpack_sharing_consume_default_rxjs_operators_rxjs_operators} [built] [code generated]
+    [used exports unknown]
+    harmony side effect evaluation rxjs/operators [698] ./node_modules/@angular/common/fesm2022/_module-chunk.mjs 10:0-77
+    harmony import specifier rxjs/operators [698] ./node_modules/@angular/common/fesm2022/_module-chunk.mjs 1054:23-32
+    harmony import specifier rxjs/operators [698] ./node_modules/@angular/common/fesm2022/_module-chunk.mjs 1283:38-46
+    harmony import specifier rxjs/operators [698] ./node_modules/@angular/common/fesm2022/_module-chunk.mjs 1341:106-114
+    harmony import specifier rxjs/operators [698] ./node_modules/@angular/common/fesm2022/_module-chunk.mjs 1463:33-42
+    harmony import specifier rxjs/operators [698] ./node_modules/@angular/common/fesm2022/_module-chunk.mjs 1467:30-36
+    harmony import specifier rxjs/operators [698] ./node_modules/@angular/common/fesm2022/_module-chunk.mjs 1472:29-32
+    harmony import specifier rxjs/operators [698] ./node_modules/@angular/common/fesm2022/_module-chunk.mjs 1479:29-32
+    harmony import specifier rxjs/operators [698] ./node_modules/@angular/common/fesm2022/_module-chunk.mjs 1486:29-32
+    harmony import specifier rxjs/operators [698] ./node_modules/@angular/common/fesm2022/_module-chunk.mjs 1494:29-32
+    harmony side effect evaluation rxjs/operators [6443] ./node_modules/@angular/common/fesm2022/http.mjs 11:0-37
+    harmony import specifier rxjs/operators [6443] ./node_modules/@angular/common/fesm2022/http.mjs 114:23-26
+    harmony side effect evaluation rxjs/operators [6124] ./node_modules/@angular/core/fesm2022/_debug_node-chunk.mjs 12:0-37
+    harmony import specifier rxjs/operators [6124] ./node_modules/@angular/core/fesm2022/_debug_node-chunk.mjs 12118:67-70
+    + 83 reasons
+chunk {default-webpack_sharing_consume_default_rxjs_rxjs} (runtime: bikes, main, polyfills, styles) (id h[39m[37mint: default) 42 bytes split chunk (cache group: default)
+  consume shared module (default) rxjs@!=7...8...0 (strict) (singleton) (fallback: ./node_modules/rxjs/dist...(truncated) [8830] 42 bytes {default-webpack_sharing_consume_default_rxjs_rxjs} [built] [code generated]
+    [used exports unknown]
+    harmony side effect evaluation rxjs [6223] ./node_modules/@angular/common/fesm2022/_location-chunk.mjs 9:0-31
+    harmony import specifier rxjs [6223] ./node_modules/@angular/common/fesm2022/_location-chunk.mjs 186:17-24
+    harmony side effect evaluation rxjs [698] ./node_modules/@angular/common/fesm2022/_module-chunk.mjs 11:0-44
+    harmony import specifier rxjs [698] ./node_modules/@angular/common/fesm2022/_module-chunk.mjs 760:15-25
+    harmony import specifier rxjs [698] ./node_modules/@angular/common/fesm2022/_module-chunk.mjs 1053:97-101
+    harmony import specifier rxjs [698] ./node_modules/@angular/common/fesm2022/_module-chunk.mjs 1053:128-130
+    harmony import specifier rxjs [698] ./node_modules/@angular/common/fesm2022/_module-chunk.mjs 1055:17-27
+    harmony import specifier rxjs [698] ./node_modules/@angular/common/fesm2022/_module-chunk.mjs 1463:20-22
+    harmony import specifier rxjs [698] ./node_modules/@angular/common/fesm2022/_module-chunk.mjs 1585:15-25
+    harmony side effect evaluation rxjs [316] ./node_modules/@angular/common/fesm2022/common.mjs 18:0-14
+    harmony side effect evaluation rxjs [6443] ./node_modules/@angular/common/fesm2022/http.mjs 10:0-26
+    harmony import specifier rxjs [6443] ./node_modules/@angular/common/fesm2022/http.mjs 101:11-13
+    harmony side effect evaluation rxjs [6124] ./node_modules/@angular/core/fesm2022/_debug_node-chunk.mjs 11:0-45
+    harmony import specifier rxjs [6124] ./node_modules/@angular/core/fesm2022/_debug_node-chunk.mjs 1320:33-40
+    + 113 reasons
+chunk {main} (runtime: main) main.js (main) 190 KiB (javascript) 420 bytes (share-init) 28.6 KiB (runtime) [entry] [rendered]
+  dependent modules 185 KiB[39m[37m [dependent] 75 modules
+  runtime modules 28.6 KiB 19 modules
+  + 14 chunk modules
+chunk {node_modules_angular_core_fesm2022_core_mjs} (runtime: bikes, main, polyfills, styles) node_modules_angular_core_fesm2022_core_mjs.js 84 bytes (consume-shared) 946 KiB (javascript) [rendered]
+  dependent modules 832 KiB (javascript) 84 bytes (consume-shared) [dependent] 7 modules
+  ./node_modules/@angular/core/fesm2022/core.mjs [7580] 115 KiB {node_modules_angular_core_fesm2022_core_mjs} [built] [code generated]
+    [used exports unknown]
+    consume shared fallback @angular/core [8814] consume shared module (default) @angular/core@~1...2...9 (strict) (singleton) (fallback: ./node_modules/@angular/core/fesm2022/core.mjs)
+    provide module for shared /Users/ctw00585/jonas-projects/bike-shop-nx-module-federation/node_modules/@angular/core/fesm2022/core.mjs [2299] provide shared module (default) @angular/core@21.2.9 = ./node_modules/@angular/core/fesm2022/core.mjs
+chunk {node_modules_rxjs_dist_esm_index_js} (runtime: bikes, main, polyfills, styles) node_modules_rxjs_dist_esm_index_js.js 32.4 KiB [rendered]
+  dependent modules 22.6 KiB [dependent] 34 modules
+  ./node_modules/rxjs/dist/esm/index.js [845] 9.85 KiB {node_modules_rxjs_dist_esm_index_js} [built] [code generated]
+    [used exports unknown]
+    consume shared fallback rxjs [8830] consume shared module (default) rxjs@!=7...8...0 (strict) (singleton) (fallback: ./node_modules/rxjs/dist/esm/index.js)
+    provide module for shared /Users/ctw00585/jonas-projects/bike-shop-nx-module-federation/node_modules/rxjs/dist/esm/index.js [63] provide shared module (default) rxjs@7.8.2 = ./node_modules/rxjs/dist/esm/index.js
+chunk {node_modules_rxjs_dist_esm_operators_index_js} (runtime: bikes, main, polyfills, styles) node_modules_rxjs_dist_esm_operators_index_js.js 7.06 KiB [rendered]
+  dependent modules 390 bytes [dependent] 2 modules
+  ./node_modules/rxjs/dist/esm/operators/index.js [8219] 6.68 KiB {node_modules_rxjs_dist_esm_operat[39m[37mors_index_js} [built] [code generated]
+    [used exports unknown]
+    consume shared fallback rxjs/operators [2814] consume shared module (default) rxjs/operators@!=7...8...0 (strict) (singleton) (fallback: ./node_modules/rxjs/dist/esm/operators/index.js)
+    provide module for shared /Users/ctw00585/jonas-projects/bike-shop-nx-module-federation/node_modules/rxjs/dist/esm/operators/index.js [7599] provide shared module (default) rxjs/operators@7.8.2 = ./node_modules/rxjs/dist/esm/operators/index.js
+chunk {polyfills} (runtime: polyfills) polyfills.js (polyfills) 281 KiB (javascript) 420 bytes (share-init) 26.2 KiB (runtime) [entry] [rendered]
+  dependent modules 185 KiB [dependent] 75 modules
+  runtime modules 26.2 KiB 18 modules
+  + 14 chunk modules
+chunk {styles} (runtime: styles) styles.css (styles) 190 KiB (javascript) 79 bytes (css/mini-extract) 420 bytes (share-init) 26.2 KiB (runtime) [entry] [rendered]
+  dependent modules 185 KiB (javascript) 79 bytes (css/mini-extract) [dependent] 76 modules
+  runtime modules 26.2 KiB 18 modules
+  + 14 chunk modules
+chunk {vendor} (runtime: main) (vendor) (id hint: defaultVendors) [initial] split chunk (cache group: defaultVendors) (name: vendor)
+  
+
+LOG from webpack.Compilation
+<t> runtime requirements.modules: 0.076 ms
+<t> runtime requirements.chunks: 0.064041 ms
+<t> runtime requirements.entries: 0.536041 ms
+<t> compute affected modules: 0.001542 ms
+<t> finish modules: 9.899625 ms
+<t> report dependency errors and warnings: 3.110125 ms
+<t> optimize dependencies: 2.375583 ms
+<t> create chunks: 9.840167 ms
+<t> compute affected modules with chunk graph: 0.001291 ms
+<t> optimize: 8.575417 ms
+    625 modules hashed, 0 from cache (1.68 variants per module in average)
+<t> module hashing: 8.419042 ms
+    100% code generated (361 generated, 0 from cache)
+<t> code generation: 37.915166 ms
+<t> runtime requirements.modules: 0.688709 ms
+<t> runtime requirements.chunks: 0.213209 ms
+<t> runtime requirements.entries: 1.398792 ms
+<t> runtim[39m[37me requirements: 2.338292 ms
+<t> hashing: initialize hash: 0.004708 ms
+<t> hashing: sort chunks: 0.075541 ms
+<t> hashing: hash runtime modules: 7.683085 ms
+<t> hashing: hash chunks: 1.270913 ms
+<t> hashing: hash digest: 0.038916 ms
+<t> hashing: process full hash modules: 0.00075 ms
+<t> hashing: 9.132 ms
+    100% code generated (73 generated, 0 from cache)
+<t> record hash: 0.020042 ms
+<t> module assets: 0.0755 ms
+<t> create chunk assets: 7.421958 ms
+<t> process assets: 311.642041 ms
+
+LOG from webpack.Compiler
+<t> make hook: 1953.667375 ms
+<t> finish make hook: 1.888584 ms
+<t> finish compilation: 13.023916 ms
+<t> seal compilation: 399.224917 ms
+<t> afterCompile hook: 0.087917 ms
+<t> emitAssets: 13.4615 ms
+<t> emitRecords: 0.029541 ms
+<t> done hook: 0.065167 ms
+<t> beginIdle: 0.23175 ms
+
+LOG from webpack.ResolverCachePlugin
+    22% really resolved (724 real resolves with 0 cached but invalid, 2643 cached valid, 0 concurrent)
+
+LOG from webpack.FlagDependencyExportsPlugin
+<t> restore cached provided exports: 0.683667 ms
+<t> figure out provided exports: 6.351584 ms
+    91% of exports of modules have been determined (33 no declared exports, 339 not cached, 1 flagged uncacheable, 0 from cache, 0 from mem cache, 15 additional calculations due to dependencies)
+<t> store provided exports into cache: 1.075541 ms
+
+LOG from webpack.SideEffectsFlagPlugin
+<t> update dependencies: 2.287791 ms
+
+LOG from webpack.buildChunkGraph
+<t> visitModules: prepare: 1.103304 ms
+<t> visitModules: visiting: 2.059333 ms
+<t> visitModules: calculating available modules: 0.169458 ms
+<t> visitModules: merging available modules: 0.0705 ms
+<t> visitModules: check modules for revisit: 0.087792 ms
+<t> visitModules: prepare: 2.949168 ms
+<t> visitModules: visiting: 3.715458 ms
+<t> visitModules: calculating available modules: 0.031916 ms
+<t> visitModules: merging available modules: 0.009541 ms
+<t> visitModules: check modules for revisit: 0.002667 ms
+<t> visitModules: prepare: 0.870702 ms
+<t> visitModules: visit[39m[37ming: 1.19425 ms
+<t> visitModules: calculating available modules: 0.010334 ms
+<t> visitModules: merging available modules: 0.004125 ms
+    2764 queue items processed (1276 blocks)
+    86 chunk groups connected
+    86 chunk groups processed for merging (86 module sets, 0 forked, 0 + 0 modules forked, 0 + 0 modules merged into fork, 0 resulting modules)
+    22 chunk group info updated (0 already connected chunk groups reconnected)
+<t> visitModules: 7.798958 ms
+<t> connectChunkGroups: 0.1115 ms
+<t> cleanup: 0.004208 ms
+
+LOG from webpack.SplitChunksPlugin
+<t> prepare: 0.021375 ms
+<t> modules: 1.852458 ms
+<t> queue: 0.541958 ms
+<t> maxSize: 0.035541 ms
+
+LOG from webpack.FileSystemInfo
+    1067 new snapshots created
+    0% root snapshot uncached (0 / 2643)
+    0% children snapshot uncached (0 / 0)
+    0 entries tested
+    File info in cache: 238 timestamps 0 hashes 0 timestamp hash combinations
+    File timestamp snapshot optimization: 92% (4367/4734) entries shared via 5 shared snapshots (725 times referenced)
+    Directory info in cache: 0 timestamps 0 hashes 0 timestamp hash combinations
+    Missing items snapshot optimization: 64% (554/865) entries shared via 16 shared snapshots (77 times referenced)
+    Managed items info in cache: 83 items
+    Managed items snapshot optimization: 22% (315/1450) entries shared via 16 shared snapshots (48 times referenced)
+    Managed files snapshot optimization: 76% (3939/5178) entries shared via 198 shared snapshots (940 times referenced)
+    Managed missing snapshot optimization: 81% (3977/4881) entries shared via 232 shared snapshots (719 times referenced)
+
+2026-04-18 12:18:15: webpack 5.105.2 compiled in 2741 ms (b5465f0b45329358)[39m
+    [webpack.cache.PackFileCacheStrategy] Storing pack...
+    [webpack.cache.PackFileCacheStrategy] Capturing build dependencies... (/Users/ctw00585/jonas-projects/bike-shop-nx-module-federation/node_modules/@angular-devkit/build-angular/node_modules/webpack/lib/, /Users/ctw00585/jonas-projects/bike-shop-nx-module-federation/node_modules/@angular-devkit/build-angular/node_modules/css-loader/dist/cjs.js, /Users/ctw00585/jonas-projects/bike-shop-nx-module-federation/node_modules/@angular-devkit/build-angular/node_modules/postcss-loader/dist/cjs.js, /Users/ctw00585/jonas-projects/bike-shop-nx-module-federation/node_modules/resolve-url-loader/index.js, /Users/ctw00585/jonas-projects/bike-shop-nx-module-federation/node_modules/sass-loader/dist/cjs.js, /Users/ctw00585/jonas-projects/bike-shop-nx-module-federation/node_modules/@angular-devkit/build-angular/src/tools/babel/webpack-loader.js, /Users/ctw00585/jonas-projects/bike-shop-nx-module-federation/node_modules/source-map-loader/dist/cjs.js, /Users/ctw00585/jonas-projects/bike-shop-nx-module-federation/node_modules/@angular-devkit/build-angular/node_modules/mini-css-extract-plugin/dist/loader.js, /Users/ctw00585/jonas-projects/bike-shop-nx-module-federation/node_modules/@ngtools/webpack/src/ivy/index.js)
+<t> [webpack.cache.PackFileCacheStrategy] resolve build dependencies: 246.987333 ms
+<t> [webpack.cache.PackFileCacheStrategy] snapshot build dependencies: 19.401666 ms
+    [webpack.cache.PackFileCacheStrategy] Captured build dependencies
+    [webpack.cache.PackFileCacheStrategy] 2162 fresh items in cache put into pack 0
+    [webpack.cache.PackFileCacheStrategy] Serialization of 'Compilation/modules|javascript/esm|/Users/ctw00585/jonas-projects/bike-shop-nx-module-federation/node_modules/@angular-devkit/build-angular/src/tools/babel/webpack-loader.js??ruleSet[1].rules[2].use[0]!/Users/ctw00585/jonas-projects/bike-shop-nx-module-federation/node_modules/source-map-loader/dist/cjs.js??ruleSet[1].rules[3]!/Users/ctw00585/jonas-projects/bike-shop-nx-module-federation/node_modules/@angular/core/fesm2022/core.mjs': 1.809458 ms
+    [webpack.cache.PackFileCacheStrategy] Serialization of 'Compilation/modules|javascript/esm|/Users/ctw00585/jonas-projects/bike-shop-nx-module-federation/node_modules/@angular-devkit/build-angular/src/tools/babel/webpack-loader.js??ruleSet[1].rules[2].use[0]!/Users/ctw00585/jonas-projects/bike-shop-nx-module-federation/node_modules/source-map-loader/dist/cjs.js??ruleSet[1].rules[3]!/Users/ctw00585/jonas-projects/bike-shop-nx-module-federation/node_modules/@angular/forms/fesm2022/forms.mjs': 1.305375 ms
+    [webpack.cache.PackFileCacheStrategy] Serialization of 'Compilation/modules|javascript/esm|/Users/ctw00585/jonas-projects/bike-shop-nx-module-federation/node_modules/@angular-devkit/build-angular/src/tools/babel/webpack-loader.js??ruleSet[1].rules[2].use[0]!/Users/ctw00585/jonas-projects/bike-shop-nx-module-federation/node_modules/source-map-loader/dist/cjs.js??ruleSet[1].rules[3]!/Users/ctw00585/jonas-projects/bike-shop-nx-module-federation/node_modules/@angular/core/fesm2022/_debug_node-chunk.mjs': 4.406916 ms
+    [webpack.cache.PackFileCacheStrategy] Serialization of 'FlagDependencyExportsPlugin|javascript/esm|/Users/ctw00585/jonas-projects/bike-shop-nx-module-federation/node_modules/@angular-devkit/build-angular/src/tools/babel/webpack-loader.js??ruleSet[1].rules[2].use[0]!/Users/ctw00585/jonas-projects/bike-shop-nx-module-federation/node_modules/source-map-loader/dist/cjs.js??ruleSet[1].rules[3]!/Users/ctw00585/jonas-projects/bike-shop-nx-module-federation/node_modules/@angular/core/fesm2022/_debug_node-chunk.mjs': 1.184167 ms
+    [webpack.cache.PackFileCacheStrategy] Serialization of 'Compilation/codeGeneration|javascript/esm|/Users/ctw00585/jonas-projects/bike-shop-nx-module-federation/node_modules/@angular-devkit/build-angular/src/tools/babel/webpack-loader.js??ruleSet[1].rules[2].use[0]!/Users/ctw00585/jonas-projects/bike-shop-nx-module-federation/node_modules/source-map-loader/dist/cjs.js??ruleSet[1].rules[3]!/Users/ctw00585/jonas-projects/bike-shop-nx-module-federation/node_modules/@angular/core/fesm2022/core.mjs|bikes
+    main
+    polyfills
+    styles': 1.306125 ms
+    [webpack.cache.PackFileCacheStrategy] Serialization of 'Compilation/codeGeneration|javascript/esm|/Users/ctw00585/jonas-projects/bike-shop-nx-module-federation/node_modules/@angular-devkit/build-angular/src/tools/babel/webpack-loader.js??ruleSet[1].rules[2].use[0]!/Users/ctw00585/jonas-projects/bike-shop-nx-module-federation/node_modules/source-map-loader/dist/cjs.js??ruleSet[1].rules[3]!/Users/ctw00585/jonas-projects/bike-shop-nx-module-federation/node_modules/@angular/forms/fesm2022/forms.mjs|bikes
+    main
+    polyfills
+    styles': 1.348334 ms
+<i> [webpack.cache.PackFileCacheStrategy] Serialization of 'Compilation/codeGeneration|javascript/esm|/Users/ctw00585/jonas-projects/bike-shop-nx-module-federation/node_modules/@angular-devkit/build-angular/src/tools/babel/webpack-loader.js??ruleSet[1].rules[2].use[0]!/Users/ctw00585/jonas-projects/bike-shop-nx-module-federation/node_modules/source-map-loader/dist/cjs.js??ruleSet[1].rules[3]!/Users/ctw00585/jonas-projects/bike-shop-nx-module-federation/node_modules/@angular/core/fesm2022/_debug_node-chunk.mjs|bikes
+<i> main
+<i> polyfills
+<i> styles': 10.308333 ms
+    [webpack.cache.PackFileCacheStrategy] Serialization of 'Compilation/codeGeneration|javascript/esm|/Users/ctw00585/jonas-projects/bike-shop-nx-module-federation/node_modules/@angular-devkit/build-angular/src/tools/babel/webpack-loader.js??ruleSet[1].rules[2].use[0]!/Users/ctw00585/jonas-projects/bike-shop-nx-module-federation/node_modules/source-map-loader/dist/cjs.js??ruleSet[1].rules[3]!/Users/ctw00585/jonas-projects/bike-shop-nx-module-federation/node_modules/@angular/core/fesm2022/_effect-chunk2.mjs|bikes
+    main
+    polyfills
+    styles': 1.376042 ms
+    [webpack.cache.PackFileCacheStrategy] Serialization of 'Compilation/codeGeneration|javascript/esm|/Users/ctw00585/jonas-projects/bike-shop-nx-module-federation/node_modules/@angular-devkit/build-angular/src/tools/babel/webpack-loader.js??ruleSet[1].rules[2].use[0]!/Users/ctw00585/jonas-projects/bike-shop-nx-module-federation/node_modules/source-map-loader/dist/cjs.js??ruleSet[1].rules[3]!/Users/ctw00585/jonas-projects/bike-shop-nx-module-federation/node_modules/@angular/common/fesm2022/_module-chunk.mjs|bikes
+    main
+    polyfills
+    styles': 1.081125 ms
+    [webpack.cache.PackFileCacheStrategy] Serialization of 'Compilation/codeGeneration|javascript/esm|/Users/ctw00585/jonas-projects/bike-shop-nx-module-federation/node_modules/@angular-devkit/build-angular/src/tools/babel/webpack-loader.js??ruleSet[1].rules[2].use[0]!/Users/ctw00585/jonas-projects/bike-shop-nx-module-federation/node_modules/source-map-loader/dist/cjs.js??ruleSet[1].rules[3]!/Users/ctw00585/jonas-projects/bike-shop-nx-module-federation/node_modules/@angular/router/fesm2022/_router-chunk.mjs|bikes
+    main
+    polyfills
+    styles': 4.258875 ms
+    [webpack.cache.PackFileCacheStrategy] Serialization of 'Compilation/codeGeneration|javascript/esm|/Users/ctw00585/jonas-projects/bike-shop-nx-module-federation/node_modules/@angular-devkit/build-angular/src/tools/babel/webpack-loader.js??ruleSet[1].rules[2].use[0]!/Users/ctw00585/jonas-projects/bike-shop-nx-module-federation/node_modules/source-map-loader/dist/cjs.js??ruleSet[1].rules[3]!/Users/ctw00585/jonas-projects/bike-shop-nx-module-federation/node_modules/@angular/common/fesm2022/_common_module-chunk.mjs|bikes
+    main
+    polyfills
+    styles': 1.643625 ms
+    [webpack.cache.PackFileCacheStrategy] Serialization of 'Compilation/assets|chunkbikes': 1.385084 ms
+    [webpack.cache.PackFileCacheStrategy] Serialization of 'Compilation/assets|chunkmain': 1.080834 ms
+    [webpack.cache.PackFileCacheStrategy] Serialization of 'Compilation/assets|chunkpolyfills': 1.292042 ms
+    [webpack.cache.PackFileCacheStrategy] Serialization of 'Compilation/assets|chunknode_modules_angular_core_fesm2022_core_mjs': 5.002083 ms
+    [webpack.cache.PackFileCacheStrategy] Serialization of 'Compilation/assets|chunkdefault-node_modules_angular_router_fesm2022_router_mjs': 1.078458 ms
+    [webpack.cache.PackFileCacheStrategy] Serialization of 'Compilation/assets|chunkdefault-node_modules_rxjs_dist_esm_internal_operators_auditTime_js-node_modules_rxjs_dist_esm-9f2bd5': 1.615708 ms
+    [webpack.cache.PackFileCacheStrategy] Serialization of 'SourceMapDevToolPlugin|node_modules_angular_core_fesm2022_core_mjs.js': 3.055917 ms
+<t> [webpack.cache.PackFileCacheStrategy] store pack: 312.530958 ms
+    [webpack.cache.PackFileCacheStrategy] Stored pack (2162 items, 1 files, 101 MiB)
+[32m✔[39m Browser application bundle generation complete.
+- Copying assets...
+[32m✔[39m Copying assets complete.
+- Generating index html...
+[32m✔[39m Index html generation complete.
+[37m
+Initial chunk files                                                                                     | Names         |  Raw size
+polyfills.js                                                                                            | polyfills     | 436.45 kB | 
+main.js                                                                                                 | main          | 346.90 kB | 
+remoteEntry.mjs                                                                                         | bikes         | 345.44 kB | 
+styles.css                                                                                              | styles        |   1.54 kB | 
+                                                                                                        | vendor        |   0 bytes | 
+
+                                                                                                        | Initial total |   1.13 MB
+
+Lazy chunk files                                                                                        | Names         |  Raw size
+node_modules_angular_core_fesm2022_core_mjs.js                                                          | -             |   1.21 MB | 
+default-node_modules_rxjs_dist_esm_internal_operators_auditTime_js-node_modules_rxjs_dist_esm-9f2bd5.js | -             | 310.18 kB | 
+default-node_modules_angular_router_fesm2022_router_mjs.js                                              | -             | 269.16 kB | 
+default-node_modules_angular_common_fesm2022_common_mjs.js                                              | -             | 213.54 kB | 
+default-node_modules_angular_forms_fesm2022_forms_mjs.js                                                | -             | 176.39 kB | 
+default-node_modules_angular_common_fesm2022_http_mjs.js                                                | -             | 107.17 kB | 
+node_modules_rxjs_dist_esm_index_js.js                                                                  | -         [39m[37m    |  99.94 kB | 
+default-node_modules_angular_platform-browser_fesm2022_platform-browser_mjs.js                          | -             |  73.36 kB | 
+node_modules_rxjs_dist_esm_operators_index_js.js                                                        | -             |  34.82 kB | 
+common.js                                                                                               | common        |  27.93 kB | 
+default-node_modules_angular_core_fesm2022__untracked-chunk_mjs-node_modules_angular_core_fes-2212f0.js | -             |  21.37 kB | 
+apps_bikes_src_bootstrap_ts.js                                                                          | bootstrap     |   3.22 kB | 
+                                                                                                        | -             |   0 bytes | 
+                                                                                                        | -             |   0 bytes | 
+                                                                                                        | -             |   0 bytes | 
+                                                                                                        | -             |   0 bytes | 
+                                                                                                        | -             |   0 bytes | 
+                                                                                                        | -             |   0 bytes | 
+                                                                                                        | -             |   0 bytes | 
+
+Build at: 2026-04-18T11:18:16.524Z - Hash: b5465f0b45329358 - Time: 3542ms[39m

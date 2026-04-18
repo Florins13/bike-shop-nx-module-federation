@@ -2,6 +2,7 @@ import { createApplication } from '@angular/platform-browser';
 import { createCustomElement } from '@angular/elements';
 import { provideHttpClient } from '@angular/common/http';
 import { provideZonelessChangeDetection } from '@angular/core';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { BikeListComponent } from './app/product/bike-list/bike-list-component';
 
 export async function mount() {
@@ -9,6 +10,7 @@ export async function mount() {
     providers: [
       provideZonelessChangeDetection(),
       provideHttpClient(),
+      provideAnimationsAsync(),
     ]
   });
 

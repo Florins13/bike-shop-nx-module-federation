@@ -1,9 +1,11 @@
 import { ChangeDetectionStrategy, Component, computed, ElementRef, OnDestroy, OnInit } from '@angular/core';
 import { CartService } from './cart.service';
+import { ButtonModule } from 'primeng/button';
+import { TagModule } from 'primeng/tag';
 
 @Component({
   selector: 'app-cart',
-  imports: [],
+  imports: [ButtonModule, TagModule],
   templateUrl: './cart-component.html',
   styleUrl: './cart-component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush

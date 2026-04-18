@@ -1,0 +1,44 @@
+- Generating browser application bundles (phase: setup)...
+[1m[33m    TypeScript compiler options "target" and "useDefineForClassFields" are set to "ES2022" and "false" respectively by the Angular CLI. To control ECMA version and features use the Browserslist configuration. For more information, see https://angular.dev/tools/cli/build#configuring-browser-compatibility
+    NOTE: You can set the "target" to "ES2022" in the project's tsconfig to remove this warning.[39m[22m
+[1m[33mCould not find a version for "@angular/animations" in the root "package.json" when collecting shared packages for the Module Federation setup. The package will not be shared.[39m[22m
+[1m[33mCould not find a version for "@nx/module-federation" in the root "package.json" when collecting shared packages for the Module Federation setup. The package will not be shared.[39m[22m
+(node:20394) [DEP0180] DeprecationWarning: fs.Stats constructor is deprecated.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+[32m✔[39m Browser application bundle generation complete.
+[32m✔[39m Browser application bundle generation complete.
+- Copying assets...
+[32m✔[39m Copying assets complete.
+- Generating index html...
+[32m✔[39m Index html generation complete.
+[37m[0m[0m
+[0m[1mInitial chunk files[22m                                                                                    [2m | [22m[1mNames[22m        [2m | [22m [1mRaw size[22m[0m
+[0m[32mmain.js[37m                                                                                                [2m | [22m[2mmain[22m         [2m | [22m[36m343.12 kB[37m[2m | [22m[0m
+[0m[32mremoteEntry.mjs[37m                                                                                        [2m | [22m[2morders[22m       [2m | [22m[36m341.71 kB[37m[2m | [22m[0m
+[0m[32mstyles.css[37m                                                                                             [2m | [22m[2mstyles[22m       [2m | [22m  [36m1.54 kB[37m[2m | [22m[0m
+[0m                                                                                                       [2m | [22m[2mvendor[22m       [2m | [22m  [36m0 bytes[37m[2m | [22m[0m
+[0m[0m
+[0m[1m [22m                                                                                                      [2m | [22m[1mInitial total[22m[2m | [22m[1m686.37 kB[22m[0m
+[0m[0m
+[0m[1mLazy chunk files[22m                                                                                       [2m | [22m[1mNames[22m        [2m | [22m [1mRaw size[22m[0m
+[0m[32mnode_modules_angular_core_fesm2022_core_mjs.js[37m                                                         [2m | [22m[2m-[22m            [2m | [22m  [36m1.21 MB[37m[2m | [22m[0m
+[0m[32mdefault-node_modules_rxjs_dist_esm_internal_operators_auditTime_js-node_modules_rxjs_dist_esm-9f2bd5.js[37m[2m | [22m[2m-[22m            [2m | [22m[36m310.18 kB[37m[2m | [22m[0m
+[0m[32mdefault-node_modules_angular_router_fesm2022_router_mjs.js[37m                                             [2m | [22m[2m-[22m            [2m | [22m[36m269.16 kB[37m[2m | [22m[0m
+[0m[32mdefault-node_modules_angul[39m[37mar_common_fesm2022_common_mjs.js[37m                                             [2m | [22m[2m-[22m            [2m | [22m[36m213.55 kB[37m[2m | [22m[0m
+[0m[32mdefault-node_modules_angular_forms_fesm2022_forms_mjs.js[37m                                               [2m | [22m[2m-[22m            [2m | [22m[36m176.39 kB[37m[2m | [22m[0m
+[0m[32mdefault-node_modules_angular_common_fesm2022_http_mjs.js[37m                                               [2m | [22m[2m-[22m            [2m | [22m[36m107.17 kB[37m[2m | [22m[0m
+[0m[32mnode_modules_rxjs_dist_esm_index_js.js[37m                                                                 [2m | [22m[2m-[22m            [2m | [22m [36m99.94 kB[37m[2m | [22m[0m
+[0m[32mdefault-node_modules_angular_platform-browser_fesm2022_platform-browser_mjs.js[37m                         [2m | [22m[2m-[22m            [2m | [22m [36m73.36 kB[37m[2m | [22m[0m
+[0m[32mcommon.js[37m                                                                                              [2m | [22m[2mcommon[22m       [2m | [22m [36m39.52 kB[37m[2m | [22m[0m
+[0m[32mnode_modules_rxjs_dist_esm_operators_index_js.js[37m                                                       [2m | [22m[2m-[22m            [2m | [22m [36m34.82 kB[37m[2m | [22m[0m
+[0m[32mdefault-node_modules_angular_core_fesm2022__untracked-chunk_mjs-node_modules_angular_core_fes-2212f0.js[37m[2m | [22m[2m-[22m            [2m | [22m [36m21.37 kB[37m[2m | [22m[0m
+[0m[32mapps_orders_src_bootstrap_ts.js[37m                                                                        [2m | [22m[2mbootstrap[22m    [2m | [22m  [36m3.25 kB[37m[2m | [22m[0m
+[0m                                                                                                       [2m | [22m[2m-[22m            [2m | [22m  [36m0 bytes[37m[2m | [22m[0m
+[0m                                                   [39m[37m                                                    [2m | [22m[2m-[22m            [2m | [22m  [36m0 bytes[37m[2m | [22m[0m
+[0m                                                                                                       [2m | [22m[2m-[22m            [2m | [22m  [36m0 bytes[37m[2m | [22m[0m
+[0m                                                                                                       [2m | [22m[2m-[22m            [2m | [22m  [36m0 bytes[37m[2m | [22m[0m
+[0m                                                                                                       [2m | [22m[2m-[22m            [2m | [22m  [36m0 bytes[37m[2m | [22m[0m
+[0m                                                                                                       [2m | [22m[2m-[22m            [2m | [22m  [36m0 bytes[37m[2m | [22m[0m
+[0m                                                                                                       [2m | [22m[2m-[22m            [2m | [22m  [36m0 bytes[37m[2m | [22m[0m
+[0m[0m
+[0mBuild at: [1m[37m2026-04-18T11:33:31.093Z[37m[22m - Hash: [1m[37m525bfce4d742962a[37m[22m - Time: [1m[37m1978[37m[22mms[0m[39m

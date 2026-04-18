@@ -2,10 +2,15 @@ import { ChangeDetectionStrategy, Component, OnDestroy, OnInit, signal, Writable
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { Bike } from '../bike';
 import { BikeService } from '../bike.service';
+import { ButtonModule } from 'primeng/button';
+import { CardModule } from 'primeng/card';
+import { TagModule } from 'primeng/tag';
+import { InputTextModule } from 'primeng/inputtext';
+import { BadgeModule } from 'primeng/badge';
 
 @Component({
   selector: 'app-bike-list',
-  imports: [ReactiveFormsModule, FormsModule],
+  imports: [ReactiveFormsModule, FormsModule, ButtonModule, CardModule, TagModule, InputTextModule, BadgeModule],
   templateUrl: './bike-list-component.html',
   styleUrl: './bike-list-component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush

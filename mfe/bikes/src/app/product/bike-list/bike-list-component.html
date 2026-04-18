@@ -1,40 +1,48 @@
 <main style="padding: 20px;">
-  <div style="margin-bottom:10px">
-    <label for="search">Search</label>
-    <input 
-      id="search" 
-      type="text" 
-      [(ngModel)]="searchTerm" 
-      placeholder="Search bikes..."
-    >
+  <div style="margin-bottom: 10px;">
+    <span class="p-float-label">
+      <input
+        id="search"
+        pInputText
+        [(ngModel)]="searchTerm"
+        placeholder="Search bikes..."
+      />
+      <label for="search">Search</label>
+    </span>
   </div>
 
   <div style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: space-evenly;">
     @for (bike of filteredBikes(); track bike.id) {
-      <div class="bike__box">
-        <h4>Model: {{ bike.model }}</h4>
-        <img [src]="bike.imageSource" height="70" width="70" alt="{{ bike.model }}">
-        <span>Stock: {{ bike.stock }}</span>
-        <span>Details: {{ bike.details }}</span>
-        <span>Electric: {{ bike.electric ? 'Yes' : 'No' }}</span>
-        <span>Price: {{ bike.price }}€</span>
+      <p-card [header]="bike.model" [style]="{ width: '250px' }">
+        <div style="display: flex; flex-direction: column; align-items: center; gap: 8px;">
+          <img [src]="bike.imageSource" height="70" width="70" [alt]="bike.model">
+          <p-tag [value]="bike.price + '€'" severity="info" />
+          <span>Stock: {{ bike.stock }}</span>
+          <span>{{ bike.details }}</span>
+          @if (bike.electric) {
+            <p-tag value="Electric" icon="pi pi-bolt" severity="success" />
+          }
+        </div>
 
-        @if (role === 'BASIC') {
-          <button 
-            (click)="addToCart(bike)" 
-            [disabled]="bike.stock <= 0"
-          >
-            Add to cart
-          </button>
-        }
+        <ng-template #footer>
+          @if (role === 'BASIC') {
+            <p-button
+              label="Add to cart"
+              icon="pi pi-shopping-cart"
+              (onClick)="addToCart(bike)"
+              [disabled]="bike.stock <= 0"
+              size="small"
+            />
+          }
 
-        @if (role === 'MANAGER') {
-          <div style="display: flex; gap: 10px;">
-            <button (click)="editBike(bike)">Edit</button>
-            <button (click)="deleteBike(bike)">Delete</button>
-          </div>
-        }
-      </div>
+          @if (role === 'MANAGER') {
+            <div style="display: flex; gap: 10px;">
+              <p-button label="Edit" icon="pi pi-pencil" severity="secondary" size="small" (onClick)="editBike(bike)" />
+              <p-button label="Delete" icon="pi pi-trash" severity="danger" size="small" (onClick)="deleteBike(bike)" />
+            </div>
+          }
+        </ng-template>
+      </p-card>
     }
   </div>
 </main>

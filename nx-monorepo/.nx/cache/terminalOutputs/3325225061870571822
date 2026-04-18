@@ -1,0 +1,44 @@
+- Generating browser application bundles (phase: setup)...
+[1m[33m    TypeScript compiler options "target" and "useDefineForClassFields" are set to "ES2022" and "false" respectively by the Angular CLI. To control ECMA version and features use the Browserslist configuration. For more information, see https://angular.dev/tools/cli/build#configuring-browser-compatibility
+    NOTE: You can set the "target" to "ES2022" in the project's tsconfig to remove this warning.[39m[22m
+[1m[33mCould not find a version for "@angular/animations" in the root "package.json" when collecting shared packages for the Module Federation setup. The package will not be shared.[39m[22m
+[1m[33mCould not find a version for "@nx/module-federation" in the root "package.json" when collecting shared packages for the Module Federation setup. The package will not be shared.[39m[22m
+(node:24543) [DEP0180] DeprecationWarning: fs.Stats constructor is deprecated.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+[32m✔[39m Browser application bundle generation complete.
+[32m✔[39m Browser application bundle generation complete.
+- Copying assets...
+[32m✔[39m Copying assets complete.
+- Generating index html...
+[32m✔[39m Index html generation complete.
+[37m[0m[0m
+[0m[1mInitial chunk files[22m                           [2m | [22m[1mNames[22m                     [2m | [22m [1mRaw size[22m[2m | [22m[1mEstimated transfer size[22m[0m
+[0m[32mremoteEntry.mjs[37m                               [2m | [22m[2morders[22m                    [2m | [22m[36m208.15 kB[37m[2m | [22m                      [36m-[37m[0m
+[0m[32mmain.720ecee66aa26fcc.js[37m                      [2m | [22m[2mmain[22m                      [2m | [22m [36m84.51 kB[37m[2m | [22m               [36m22.56 kB[37m[0m
+[0m[32mstyles.ef46db3751d8e999.css[37m                   [2m | [22m[2mstyles[22m                    [2m | [22m  [36m0 bytes[37m[2m | [22m                      [36m-[37m[0m
+[0m[0m
+[0m[1m [22m                                             [2m | [22m[1mInitial total[22m             [2m | [22m[1m292.66 kB[22m[2m | [22m               [1m22.56 kB[22m[0m
+[0m[0m
+[0m[1mLazy chunk files[22m                              [2m | [22m[1mNames[22m                     [2m | [22m [1mRaw size[22m[2m | [22m[1mEstimated transfer size[22m[0m
+[0m[32m724.a16033ebda8f97de.js[37m                       [2m | [22m[2m-[22m                         [2m | [22m[36m298.07 kB[37m[2m | [22m               [36m83.99 kB[37m[0m
+[0m[32m359.60fdbb1889c5a853.js[37m                       [2m | [22m[2m-[22m                         [2m | [22m [36m99.68 kB[37m[2m | [22m               [36m23.31 kB[37m[0m
+[0m[32m421.1cdde0e2e5a8ad58.js[37m                       [2m | [22m[2m-[22m                         [2m | [22m [36m66.91 kB[37m[2m | [22m               [36m17.02 kB[37m[0m
+[0m[32m417.70772baa97618108.js[37m                       [2m | [22m[2m-[22m                         [2m | [22m [36m64.30 kB[37m[2m | [22m               [36m11.04 kB[37m[0m
+[0m[32m656.99444ff71250c709.js[37m                       [2m | [22m[2m-[22m                    [39m[37m     [2m | [22m [36m53.33 kB[37m[2m | [22m               [36m14.75 kB[37m[0m
+[0m[32m127.58fe3a4378dbb36a.js[37m                       [2m | [22m[2m-[22m                         [2m | [22m [36m36.86 kB[37m[2m | [22m               [36m10.11 kB[37m[0m
+[0m[32m707.728d51e3820d3594.js[37m                       [2m | [22m[2m-[22m                         [2m | [22m [36m23.08 kB[37m[2m | [22m                [36m6.47 kB[37m[0m
+[0m[32mcommon.25fa73fe9ec9dde5.js[37m                    [2m | [22m[2mcommon[22m                    [2m | [22m [36m19.68 kB[37m[2m | [22m                [36m5.55 kB[37m[0m
+[0m[32m87.b39af43abc5d0c01.js[37m                        [2m | [22m[2m-[22m                         [2m | [22m [36m12.84 kB[37m[2m | [22m                [36m4.47 kB[37m[0m
+[0m[32m37.7e60b950e1ce5afb.js[37m                        [2m | [22m[2m-[22m                         [2m | [22m  [36m3.48 kB[37m[2m | [22m                [36m1.38 kB[37m[0m
+[0m[32m310.4e35a714d391f7e8.js[37m                       [2m | [22m[2mbootstrap[22m                 [2m | [22m[36m481 bytes[37m[2m | [22m              [36m280 bytes[37m[0m
+[0m[32m__federation_expose_Orders.95e73a0bd65be6c6.js[37m[2m | [22m[2m__federation_expose_Orders[22m[2m | [22m[36m170 bytes[37m[2m | [22m              [36m129 bytes[37m[0m
+[0m[32m673.b03bee96a7bc013f.js[37m                       [2m | [22m[2mentry-routes[22m              [2m | [22m[36m151 bytes[37m[2m | [22m              [36m115 bytes[37m[0m
+[0m                                              [2m | [22m[2m-[22m                         [2m | [22m  [36m0 bytes[37m[2m | [22m                      [36m-[37m[0m
+[0m                                              [2m | [22m[2m-[22m                         [2m | [22m  [36m0 bytes[37m[2m | [22m                      [36m-[37m[0m
+[0m                                              [2m[39m[37m | [22m[2m-[22m                         [2m | [22m  [36m0 bytes[37m[2m | [22m                      [36m-[37m[0m
+[0m                                              [2m | [22m[2m-[22m                         [2m | [22m  [36m0 bytes[37m[2m | [22m                      [36m-[37m[0m
+[0m                                              [2m | [22m[2m-[22m                         [2m | [22m  [36m0 bytes[37m[2m | [22m                      [36m-[37m[0m
+[0m                                              [2m | [22m[2m-[22m                         [2m | [22m  [36m0 bytes[37m[2m | [22m                      [36m-[37m[0m
+[0m                                              [2m | [22m[2m-[22m                         [2m | [22m  [36m0 bytes[37m[2m | [22m                      [36m-[37m[0m
+[0m[0m
+[0mBuild at: [1m[37m2026-04-18T11:50:00.960Z[37m[22m - Hash: [1m[37m67556488e9cf1809[37m[22m - Time: [1m[37m4502[37m[22mms[0m[39m

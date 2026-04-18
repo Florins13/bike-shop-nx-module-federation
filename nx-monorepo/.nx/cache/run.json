@@ -1,0 +1,32 @@
+{
+  "run": {
+    "command": "nx build shell --configuration=production --skip-nx-cache",
+    "startTime": "2026-04-18T12:35:17.840Z",
+    "endTime": "2026-04-18T12:35:23.238Z",
+    "inner": false
+  },
+  "tasks": [
+    {
+      "taskId": "orders:build:production",
+      "target": "build",
+      "projectName": "orders",
+      "hash": "12195821461047575244",
+      "startTime": "2026-04-18T12:35:17.872Z",
+      "endTime": "2026-04-18T12:35:20.550Z",
+      "params": "",
+      "cacheStatus": "cache-miss",
+      "status": 0
+    },
+    {
+      "taskId": "shell:build:production",
+      "target": "build",
+      "projectName": "shell",
+      "hash": "3405564861932609879",
+      "startTime": "2026-04-18T12:35:20.553Z",
+      "endTime": "2026-04-18T12:35:23.234Z",
+      "params": "",
+      "cacheStatus": "cache-miss",
+      "status": 0
+    }
+  ]
+}

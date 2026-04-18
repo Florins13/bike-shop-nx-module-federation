@@ -1,8 +1,8 @@
 {
   "run": {
-    "command": "nx build shell --configuration=production --skip-nx-cache",
-    "startTime": "2026-04-18T12:35:17.840Z",
-    "endTime": "2026-04-18T12:35:23.238Z",
+    "command": "nx run-many --target=build --projects=shell,cart,bikes,orders --parallel=4",
+    "startTime": "2026-04-18T12:52:00.865Z",
+    "endTime": "2026-04-18T12:52:13.876Z",
     "inner": false
   },
   "tasks": [
@@ -10,9 +10,31 @@
       "taskId": "orders:build:production",
       "target": "build",
       "projectName": "orders",
-      "hash": "12195821461047575244",
-      "startTime": "2026-04-18T12:35:17.872Z",
-      "endTime": "2026-04-18T12:35:20.550Z",
+      "hash": "4189692612522273255",
+      "startTime": "2026-04-18T12:52:01.017Z",
+      "endTime": "2026-04-18T12:52:09.078Z",
+      "params": "",
+      "cacheStatus": "cache-miss",
+      "status": 0
+    },
+    {
+      "taskId": "cart:build:production",
+      "target": "build",
+      "projectName": "cart",
+      "hash": "6297102292713503027",
+      "startTime": "2026-04-18T12:52:01.017Z",
+      "endTime": "2026-04-18T12:52:09.277Z",
+      "params": "",
+      "cacheStatus": "cache-miss",
+      "status": 0
+    },
+    {
+      "taskId": "bikes:build:production",
+      "target": "build",
+      "projectName": "bikes",
+      "hash": "8064573909052330770",
+      "startTime": "2026-04-18T12:52:01.017Z",
+      "endTime": "2026-04-18T12:52:09.328Z",
       "params": "",
       "cacheStatus": "cache-miss",
       "status": 0
@@ -21,9 +43,9 @@
       "taskId": "shell:build:production",
       "target": "build",
       "projectName": "shell",
-      "hash": "3405564861932609879",
-      "startTime": "2026-04-18T12:35:20.553Z",
-      "endTime": "2026-04-18T12:35:23.234Z",
+      "hash": "11807941736423046253",
+      "startTime": "2026-04-18T12:52:09.090Z",
+      "endTime": "2026-04-18T12:52:13.862Z",
       "params": "",
       "cacheStatus": "cache-miss",
       "status": 0

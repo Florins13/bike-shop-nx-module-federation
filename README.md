@@ -1,88 +1,80 @@
-# BikeShopNxModuleFederation
+# Bike Shop Nx Module Federation
 
 ## Backend API
-In order to have the frontend part working you have to build and run the API from this branch:
+To make the frontend fully functional, build and run the API from:
 https://github.com/Florins13/software-engineering/tree/backend-rest-api
 
-## Nx ->
+## Microfrontends in this workspace
 
-<a alt="Nx logo" href="https://nx.dev" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png" width="45"></a>
+| Project | Role | Local URL |
+| --- | --- | --- |
+| `shell` | Host application | `http://localhost:4200` |
+| `cart` | Remote | `http://localhost:4201` |
+| `bikes` | Remote | `http://localhost:4202` |
+| `orders` | Remote | `http://localhost:4203` |
 
-✨ Your new, shiny [Nx workspace](https://nx.dev) is almost ready ✨.
+## Run the microfrontends
 
-[Learn more about this workspace setup and its capabilities](https://nx.dev/getting-started/tutorials/angular-monorepo-tutorial?utm_source=nx_project&amp;utm_medium=readme&amp;utm_campaign=nx_projects) or run `npx nx graph` to visually explore what was created. Now, let's get you up to speed!
-
-## Finish your CI setup
-
-[Click here to finish setting up your workspace!](https://cloud.nx.app/connect/7BTkmIIQW6)
-
-
-## Run tasks
-
-To run the dev server for your app, use:
+Install dependencies first:
 
 ```sh
-npx nx serve bike-shop
+npm install
 ```
 
-To create a production bundle:
+Run host + all remotes in dev mode (recommended):
 
 ```sh
-npx nx build bike-shop
+npx nx serve shell --devRemotes=cart,bikes,orders
 ```
 
-To see all available targets to run for a project, run:
+Run only the host:
 
 ```sh
-npx nx show project bike-shop
+npx nx serve shell
 ```
 
-These targets are either [inferred automatically](https://nx.dev/concepts/inferred-tasks?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects) or defined in the `project.json` or `package.json` files.
-
-[More about running tasks in the docs &raquo;](https://nx.dev/features/run-tasks?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
-
-## Add new projects
-
-While you could add new projects to your workspace manually, you might want to leverage [Nx plugins](https://nx.dev/concepts/nx-plugins?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects) and their [code generation](https://nx.dev/features/generate-code?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects) feature.
-
-Use the plugin's generator to create new projects.
-
-To generate a new application, use:
+Run individual remotes:
 
 ```sh
-npx nx g @nx/angular:app demo
+npx nx serve cart
+npx nx serve bikes
+npx nx serve orders
 ```
 
-To generate a new library, use:
+> `cart`, `bikes`, and `orders` have `dependsOn: ["shell:serve"]`, so starting a remote also starts the shell if it is not already running.
 
-```sh
-npx nx g @nx/angular:lib mylib
-```
+## Useful Nx commands
 
-You can use `npx nx list` to get a list of installed plugins. Then, run `npx nx list <plugin-name>` to learn about more specific capabilities of a particular plugin. Alternatively, [install Nx Console](https://nx.dev/getting-started/editor-setup?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects) to browse plugins and generators in your IDE.
+| Command | What it does |
+| --- | --- |
+| `npx nx show projects` | Lists all projects in the workspace |
+| `npx nx show project <project-name>` | Shows all targets/options for one project |
+| `npx nx graph` | Opens the project dependency graph |
+| `npx nx run <project>:<target>` | Runs a target (build/test/lint/serve) |
+| `npx nx run-many -t <target> -p <p1>,<p2>` | Runs the same target on multiple projects |
+| `npx nx affected -t <target>` | Runs target only for affected projects |
+| `npx nx build <project>` | Builds one project |
+| `npx nx test <project>` | Runs unit tests for one project |
+| `npx nx lint <project>` | Runs linting for one project |
+| `npx nx format:check` | Checks formatting |
+| `npx nx format:write` | Applies formatting |
+| `npx nx reset` | Clears Nx cache and stops daemon |
 
-[Learn more about Nx plugins &raquo;](https://nx.dev/concepts/nx-plugins?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects) | [Browse the plugin registry &raquo;](https://nx.dev/plugin-registry?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
+## Useful Nx Module Federation commands
 
+| Command | What it does |
+| --- | --- |
+| `npx nx serve shell --devRemotes=cart,bikes,orders` | Runs host with selected remotes in dev mode |
+| `npx nx serve shell --skipRemotes=cart` | Runs host while excluding one or more remotes |
+| `npx nx build shell --configuration=production` | Builds host for production |
+| `npx nx build cart --configuration=production` | Builds a remote for production |
+| `npx nx run shell:serve-static` | Serves built host output statically |
+| `npx nx run cart:serve-static` | Serves built remote output statically |
+| `npx nx g @nx/angular:host <name>` | Generates a new MF host app |
+| `npx nx g @nx/angular:remote <name> --host=<host-name>` | Generates a new MF remote app connected to a host |
+| `npx nx g @nx/angular:federate-module <name> --project=<remote-name>` | Generates a federated module in a remote |
+| `npx nx g @nx/angular:setup-mf --project=<app-name>` | Adds Module Federation config to an existing app |
 
-[Learn more about Nx on CI](https://nx.dev/ci/intro/ci-with-nx#ready-get-started-with-your-provider?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
-
-## Install Nx Console
-
-Nx Console is an editor extension that enriches your developer experience. It lets you run tasks, generate code, and improves code autocompletion in your IDE. It is available for VSCode and IntelliJ.
-
-[Install Nx Console &raquo;](https://nx.dev/getting-started/editor-setup?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
-
-## Useful links
-
-Learn more:
-
-- [Learn more about this workspace setup](https://nx.dev/getting-started/tutorials/angular-monorepo-tutorial?utm_source=nx_project&amp;utm_medium=readme&amp;utm_campaign=nx_projects)
-- [Learn about Nx on CI](https://nx.dev/ci/intro/ci-with-nx?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
-- [Releasing Packages with Nx release](https://nx.dev/features/manage-releases?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
-- [What are Nx plugins?](https://nx.dev/concepts/nx-plugins?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
-
-And join the Nx community:
-- [Discord](https://go.nx.dev/community)
-- [Follow us on X](https://twitter.com/nxdevtools) or [LinkedIn](https://www.linkedin.com/company/nrwl)
-- [Our Youtube channel](https://www.youtube.com/@nxdevtools)
-- [Our blog](https://nx.dev/blog?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
+---
+npx nx run shell:build:production
+npx nx run-many --target=build --configuration=production --projects=bikes,cart,orders --parallel=3

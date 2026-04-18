@@ -14,9 +14,7 @@
       "options": {
         "outputPath": "dist/apps/bike-shop",
         "browser": "apps/bike-shop/src/main.ts",
-        "polyfills": [
-          "zone.js"
-        ],
+        "polyfills": [],
         "tsConfig": "apps/bike-shop/tsconfig.app.json",
         "inlineStyleLanguage": "scss",
         "assets": [

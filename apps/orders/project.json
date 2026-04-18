@@ -13,7 +13,7 @@
         "outputPath": "dist/apps/orders",
         "index": "apps/orders/src/index.html",
         "main": "apps/orders/src/main.ts",
-        "polyfills": ["zone.js"],
+        "polyfills": [],
         "tsConfig": "apps/orders/tsconfig.app.json",
         "inlineStyleLanguage": "scss",
         "assets": [

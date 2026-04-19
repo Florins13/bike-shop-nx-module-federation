@@ -9,11 +9,23 @@ import { ChangeDetectionStrategy, Component, CUSTOM_ELEMENTS_SCHEMA, OnInit } fr
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class ShoppingView implements OnInit {
+  bikesLoaded = false;
+  cartLoaded = false;
+  loadError = '';
+
   async ngOnInit() {
-    const [{ mount: mountBikes }, { mount: mountCart }] = await Promise.all([
-      import('bikes/web-component'),
-      import('cart/web-component'),
-    ]);
-    await Promise.all([mountBikes(), mountCart()]);
+    try {
+      const [{ mount: mountBikes }, { mount: mountCart }] = await Promise.all([
+        import('bikes/web-component'),
+        import('cart/web-component'),
+      ]);
+      await mountBikes();
+      this.bikesLoaded = true;
+      await mountCart();
+      this.cartLoaded = true;
+    } catch (err) {
+      this.loadError = `Failed to load remotes: ${err}`;
+      console.error('Remote loading failed:', err);
+    }
   }
 }

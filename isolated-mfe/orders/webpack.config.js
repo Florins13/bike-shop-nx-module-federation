@@ -5,6 +5,7 @@ module.exports = {
   output: {
     uniqueName: 'orders',
     publicPath: 'auto',
+    scriptType: 'text/javascript',
   },
   optimization: {
     runtimeChunk: false,

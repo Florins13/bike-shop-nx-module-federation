@@ -1,4 +1,11 @@
-<div style="display: flex;justify-content: space-around;">
+@if (loadError) {
+  <div style="color: red; padding: 20px; text-align: center;">
+    <p>{{ loadError }}</p>
+    <p>Make sure all remote MFEs are running (ports 5201, 5202, 5203).</p>
+  </div>
+} @else {
+  <div style="display: flex;justify-content: space-around;">
     <mfe-bikes></mfe-bikes>
     <mfe-cart></mfe-cart>
-</div>
+  </div>
+}

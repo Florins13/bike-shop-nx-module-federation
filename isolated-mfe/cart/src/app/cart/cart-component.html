@@ -10,7 +10,7 @@
           [rounded]="true"
           size="small"
           (onClick)="removeItem(cartItem.id)"
-          style="align-self: end;"
+          [style]="{'align-self': 'end'}"
         />
 
         <h4 style="text-align: center;">Model: {{ cartItem.bike.model }}</h4>

@@ -2,13 +2,20 @@ import { ChangeDetectionStrategy, Component, CUSTOM_ELEMENTS_SCHEMA, OnInit } fr
 
 @Component({
   selector: 'app-checkout-wrapper',
-  template: '<isolated-mfe-orders></isolated-mfe-orders>',
+  template: '<mfe-orders></mfe-orders>',
   changeDetection: ChangeDetectionStrategy.OnPush,
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class CheckoutWrapper implements OnInit {
+  loadError = '';
+
   async ngOnInit() {
-    const { mount } = await import('orders/web-component');
-    await mount();
+    try {
+      const { mount } = await import('orders/web-component');
+      await mount();
+    } catch (err) {
+      this.loadError = `Failed to load orders remote: ${err}`;
+      console.error('Orders remote loading failed:', err);
+    }
   }
 }

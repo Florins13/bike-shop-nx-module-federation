@@ -1,0 +1,41 @@
+<header class="header_bar">
+  <div>
+    <img 
+      (click)="goToBikes()" 
+      src="bicycle.png" 
+      style="cursor: pointer; height:70px; width:70px;" 
+      alt="Bikes"
+    >
+  </div>
+
+  <div (click)="goToBikes()">
+    <h1>Bicycles</h1>
+  </div>
+
+  <nav class="nav-style" style="display: flex; align-items: center;">
+    
+    @if (role === 'BASIC') {
+      <div>
+        <img (click)="goToOrders()" src="orders.png" alt="Orders">
+      </div>
+      <div>
+        <img (click)="goToCart()" src="shopping-cart.png" alt="Cart">
+      </div>
+      <div>
+        <img (click)="logOut()" src="logout.png" alt="Logout">
+      </div>
+    } @else if (role === 'MANAGER') {
+      <div>
+        <img (click)="logOut()" src="logout.png" alt="Logout">
+      </div>
+    } @else {
+      <div>
+        <img (click)="logIn()" src="login.png" alt="Login">
+      </div>
+      <div>
+        <img src="add-user.png" alt="Register">
+      </div>
+    }
+
+  </nav>
+</header>

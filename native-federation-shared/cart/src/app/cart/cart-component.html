@@ -1,0 +1,53 @@
+<div style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: space-evenly; width: 250px;">
+  Your Cart:
+  @for (cartItem of cartItems()?.cartItems; track cartItem.id) {
+    <div style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: space-evenly;">
+      <div class="bike__box">
+        <p-button
+          icon="pi pi-times"
+          severity="danger"
+          [text]="true"
+          [rounded]="true"
+          size="small"
+          (onClick)="removeItem(cartItem.id)"
+          [style]="{'align-self': 'end'}"
+        />
+
+        <h4 style="text-align: center;">Model: {{ cartItem.bike.model }}</h4>
+        <img [src]="cartItem.bike.imageSource" height="70" width="70" alt="{{ cartItem.bike.model }}">
+        <p-tag [value]="cartItem.bike.price + '€'" severity="info" />
+
+        <div style="display: flex; align-items: center; gap: 20px;">
+          <p-button
+            icon="pi pi-minus"
+            [rounded]="true"
+            [text]="true"
+            size="small"
+            (onClick)="updateQuantity(cartItem.id, 'decrease')"
+          />
+
+          <p>{{ cartItem.quantity }}</p>
+
+          <p-button
+            icon="pi pi-plus"
+            [rounded]="true"
+            [text]="true"
+            size="small"
+            (onClick)="updateQuantity(cartItem.id, 'increase')"
+          />
+        </div>
+      </div>
+    </div>
+  }
+
+</div>
+
+<div style="display: flex; flex-direction: row; justify-content: end; gap: 20px; padding-right: 50px;">
+  <h3>Total: {{ cartTotal() }} €</h3>
+  <p-button
+    label="Checkout"
+    icon="pi pi-shopping-cart"
+    (onClick)="goToCheckout()"
+    [disabled]="cartIsEmpty()"
+  />
+</div>

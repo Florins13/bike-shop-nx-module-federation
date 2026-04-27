@@ -1,0 +1,10 @@
+@if (loadError()) {
+  <div style="color: red; padding: 20px; text-align: center;">
+    <p>{{ loadError() }}</p>
+    <p>Make sure all remote MFEs are running (ports 5301, 5302, 5303).</p>
+  </div>
+}
+<div style="display: flex;justify-content: space-around;">
+  <div #bikesHost></div>
+  <div #cartHost></div>
+</div>

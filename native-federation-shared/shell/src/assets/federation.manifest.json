@@ -1,0 +1,5 @@
+{
+  "bikes": "http://localhost:5302/remoteEntry.json",
+  "cart": "http://localhost:5301/remoteEntry.json",
+  "orders": "http://localhost:5303/remoteEntry.json"
+}

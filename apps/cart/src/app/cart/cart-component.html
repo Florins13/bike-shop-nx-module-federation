@@ -1,51 +1,42 @@
-<div style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: space-evenly; width: 250px;">
-  Your Cart:
+<div style="width: 250px;">
+  <strong>Your Cart:</strong>
   @for (cartItem of cartItems()?.cartItems; track cartItem.id) {
-    {{"HEELO " + cartItem.id}}
-    <div style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: space-evenly;">
-      <div class="bike__box">
+    <div class="bike__box">
+      <button
+        (click)="removeItem(cartItem.id)"
+        style="align-self: flex-end; background: #c0392b; color: #fff; border: none; border-radius: 3px; padding: 2px 8px; cursor: pointer; font-size: 12px;"
+      >✕</button>
+
+      <h4 style="text-align: center;">{{ cartItem.model }}</h4>
+      <img [src]="cartItem.imageSource" height="70" width="70" alt="{{ cartItem.model }}">
+      <span style="background: #1a1a2e; color: #fff; padding: 2px 10px; border-radius: 3px; font-size: 13px; font-weight: 600;">
+        {{ cartItem.price }} €
+      </span>
+
+      <div style="display: flex; align-items: center; gap: 12px;">
         <button
-          icon="pi pi-times"
-          severity="danger"
-          size="small"
-          (click)="removeItem(cartItem.id)"
-        >X</button>
+          (click)="updateQuantity(cartItem.id, 'decrease')"
+          style="width: 28px; height: 28px; border-radius: 50%; border: 1px solid #ccc; background: #fff; cursor: pointer; font-size: 16px; display: flex; align-items: center; justify-content: center;"
+        >−</button>
 
-        <h4 style="text-align: center;">Model: {{ cartItem.model }}</h4>
-        <img [src]="cartItem.imageSource" height="70" width="70" alt="{{ cartItem.model }}">
-        <p-tag [value]="cartItem.price + '€'" severity="info" />
+        <span style="font-weight: 600; font-size: 15px;">{{ cartItem.quantity }}</span>
 
-        <div style="display: flex; align-items: center; gap: 20px;">
-          <p-button
-            icon="pi pi-minus"
-            [rounded]="true"
-            [text]="true"
-            size="small"
-            (onClick)="updateQuantity(cartItem.id, 'decrease')"
-          />
-
-          <p>{{ cartItem.quantity }}</p>
-
-          <p-button
-            icon="pi pi-plus"
-            [rounded]="true"
-            [text]="true"
-            size="small"
-            (onClick)="updateQuantity(cartItem.id, 'increase')"
-          />
-        </div>
+        <button
+          (click)="updateQuantity(cartItem.id, 'increase')"
+          style="width: 28px; height: 28px; border-radius: 50%; border: 1px solid #ccc; background: #fff; cursor: pointer; font-size: 16px; display: flex; align-items: center; justify-content: center;"
+        >+</button>
       </div>
     </div>
   }
-
 </div>
 
-<div style="display: flex; flex-direction: row; justify-content: end; gap: 20px; padding-right: 50px;">
-  <h3>Total: {{ cartTotal() }} €</h3>
-  <p-button
-    label="Checkout"
-    icon="pi pi-shopping-cart"
-    (onClick)="goToCheckout()"
+<div style="display: flex; flex-direction: row; justify-content: flex-end; align-items: center; gap: 16px; padding-right: 10px; margin-top: 12px;">
+  <h3 style="margin: 0;">Total: {{ cartTotal() }} €</h3>
+  <button
+    (click)="goToCheckout()"
     [disabled]="cartIsEmpty()"
-  />
+    style="padding: 8px 20px; background: #e94560; color: #fff; border: none; border-radius: 4px; cursor: pointer; font-size: 14px; font-weight: 500;"
+  >
+    🛒 Checkout
+  </button>
 </div>

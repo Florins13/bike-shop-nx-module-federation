@@ -1,48 +1,42 @@
 <main style="padding: 20px;">
-  <div style="margin-bottom: 10px;">
-    <span class="p-float-label">
-      <input
-        id="search"
-        pInputText
-        [(ngModel)]="searchTerm"
-        placeholder="Search bikes..."
-      />
-      <label for="search">Search</label>
-    </span>
+  <div style="margin-bottom: 16px;">
+    <input
+      id="search"
+      [(ngModel)]="searchTerm"
+      placeholder="Search bikes..."
+      style="width: 100%; padding: 8px 12px; border: 1px solid #ccc; border-radius: 4px; font-size: 14px; box-sizing: border-box;"
+    />
   </div>
 
   <div style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: space-evenly;">
     @for (bike of filteredBikes(); track bike.id) {
-      <p-card [header]="bike.model" [style]="{ width: '250px' }">
-        <div style="display: flex; flex-direction: column; align-items: center; gap: 8px;">
+      <div style="width: 250px; border: 1px solid #ddd; border-radius: 6px; overflow: hidden; background: #fff;">
+        <div style="padding: 12px 16px; font-weight: 600; font-size: 15px; border-bottom: 1px solid #eee;">
+          {{ bike.model }}
+        </div>
+        <div style="display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 16px;">
           <img [src]="bike.imageSource" height="70" width="70" [alt]="bike.model">
-          <p-tag [value]="bike.price + '€'" severity="info" />
-          <span>Stock: {{ bike.availableStock }}</span>
-          <span>{{ bike.details }}</span>
+          <span style="background: #1a1a2e; color: #fff; padding: 2px 10px; border-radius: 3px; font-size: 13px; font-weight: 600;">
+            {{ bike.price }} €
+          </span>
+          <span style="font-size: 13px; color: #666;">Stock: {{ bike.availableStock }}</span>
+          <span style="font-size: 13px; color: #444; text-align: center;">{{ bike.details }}</span>
           @if (bike.electric) {
-            <p-tag value="Electric" icon="pi pi-bolt" severity="success" />
+            <span style="background: #2d6a4f; color: #fff; padding: 2px 10px; border-radius: 3px; font-size: 12px;">
+              ⚡ Electric
+            </span>
           }
         </div>
-
-        <ng-template #footer>
-          @if (role === 'BASIC') {
-            <p-button
-              label="Add to cart"
-              icon="pi pi-shopping-cart"
-              (onClick)="addToCart(bike)"
-              [disabled]="bike.availableStock <= 0"
-              size="small"
-            />
-          }
-
-          @if (role === 'MANAGER') {
-            <div style="display: flex; gap: 10px;">
-              <p-button label="Edit" icon="pi pi-pencil" severity="secondary" size="small" (onClick)="editBike(bike)" />
-              <p-button label="Delete" icon="pi pi-trash" severity="danger" size="small" (onClick)="deleteBike(bike)" />
-            </div>
-          }
-        </ng-template>
-      </p-card>
+        <div style="padding: 12px 16px; border-top: 1px solid #eee;">
+          <button
+            (click)="addToCart(bike)"
+            [disabled]="bike.availableStock <= 0"
+            style="width: 100%; padding: 8px; background: #e94560; color: #fff; border: none; border-radius: 4px; cursor: pointer; font-size: 14px; font-weight: 500;"
+          >
+            🛒 Add to cart
+          </button>
+        </div>
+      </div>
     }
   </div>
 </main>

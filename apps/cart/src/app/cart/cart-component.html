@@ -1,33 +1,38 @@
 <div style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: space-evenly; width: 250px;">
   Your Cart:
   @for (cartItem of cartItems()?.cartItems; track cartItem.id) {
+    {{"HEELO " + cartItem.id}}
     <div style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: space-evenly;">
       <div class="bike__box">
-        <button 
-          (click)="removeItem(cartItem.id)" 
-          style="width: 25px; align-self: end;"
-        >
-          X
-        </button>
+        <button
+          icon="pi pi-times"
+          severity="danger"
+          size="small"
+          (click)="removeItem(cartItem.id)"
+        >X</button>
 
-        <h4 style="text-align: center;">Model: {{ cartItem.bike.model }}</h4>
-        <img [src]="cartItem.bike.imageSource" height="70" width="70" alt="{{ cartItem.bike.model }}">
-        <span>Price: {{ cartItem.bike.price }}€</span>
+        <h4 style="text-align: center;">Model: {{ cartItem.model }}</h4>
+        <img [src]="cartItem.imageSource" height="70" width="70" alt="{{ cartItem.model }}">
+        <p-tag [value]="cartItem.price + '€'" severity="info" />
 
         <div style="display: flex; align-items: center; gap: 20px;">
-          <button 
-            (click)="updateQuantity(cartItem.id, 'decrease')" 
-          >
-             -
-          </button>
+          <p-button
+            icon="pi pi-minus"
+            [rounded]="true"
+            [text]="true"
+            size="small"
+            (onClick)="updateQuantity(cartItem.id, 'decrease')"
+          />
 
           <p>{{ cartItem.quantity }}</p>
 
-          <button 
-            (click)="updateQuantity(cartItem.id, 'increase')" 
-          >
-            +
-          </button>
+          <p-button
+            icon="pi pi-plus"
+            [rounded]="true"
+            [text]="true"
+            size="small"
+            (onClick)="updateQuantity(cartItem.id, 'increase')"
+          />
         </div>
       </div>
     </div>
@@ -37,11 +42,10 @@
 
 <div style="display: flex; flex-direction: row; justify-content: end; gap: 20px; padding-right: 50px;">
   <h3>Total: {{ cartTotal() }} €</h3>
-  <button 
-    (click)="goToCheckout()" 
-    [disabled]="cartIsEmpty()" 
-    style="height: 30px; align-self: center;"
-  >
-    Checkout
-  </button>
+  <p-button
+    label="Checkout"
+    icon="pi pi-shopping-cart"
+    (onClick)="goToCheckout()"
+    [disabled]="cartIsEmpty()"
+  />
 </div>

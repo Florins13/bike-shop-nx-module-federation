@@ -1,4 +1,4 @@
-interface Bike {
+export interface Bike {
   id: number;
   model: string;
   imageSource: string;
@@ -8,8 +8,7 @@ interface Bike {
   price: number;
 }
 
-export interface CartItem {
-  id: number;
+export interface CartItem extends Bike {
   bike: Bike;
   quantity: number;
 }

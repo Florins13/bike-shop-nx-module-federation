@@ -18,7 +18,7 @@
         <td>{{ order.acquireType }}</td>
         <td style="display: flex; flex-direction: column;">
           @for (item of order.shippingItems; track item.id) {
-            <span>{{ item.quantity }}x {{ item.bike.model }}</span>
+            <span>{{ item.quantity }}x {{ item.model }}</span>
           }
         </td>
         <td>{{ order.totalPrice }} €</td>

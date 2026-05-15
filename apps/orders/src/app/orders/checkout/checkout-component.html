@@ -18,10 +18,10 @@
 
       <div>
         <label for="buy">Buy</label>
-        <input type="radio" id="buy" formControlName="acquire" value="buy" checked />
+        <input type="radio" id="buy" formControlName="acquireType" value="buy" checked />
 
         <label for="rent">Rent for 3 days</label>
-        <input type="radio" id="rent" formControlName="acquire" value="rent" />
+        <input type="radio" id="rent" formControlName="acquireType" value="rent" />
       </div>
 
       <button type="submit" style="align-self: end;">Finalise</button>
@@ -40,9 +40,9 @@
 
       @for (cartItem of cartItems(); track cartItem.id) {
         <tr>
-          <td>{{ cartItem.bike.model }}</td>
+          <td>{{ cartItem.model }}</td>
           <td>{{ cartItem.quantity }}</td>
-          <td>{{ cartItem.bike.price }} €</td>
+          <td>{{ cartItem.price }} €</td>
         </tr>
       }
 

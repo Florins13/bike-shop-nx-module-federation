@@ -1,11 +1,12 @@
 import { inject, Injectable, OnInit, signal, WritableSignal } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { Cart } from './cart.models';
+import { Cart, Bike } from './cart.models';
+
 
 @Injectable({ providedIn: 'root' })
 export class CartService {
-  private readonly apiUrl = 'http://localhost:8080';
+  private readonly apiUrl = 'http://localhost:8082';
   cartState: WritableSignal<Cart | null> = signal(null);
   httpClient = inject(HttpClient);
 
@@ -13,8 +14,9 @@ export class CartService {
     this.getCart().subscribe(cart => this.cartState.set(cart));
   }
 
-  addToCart(id: number): Observable<unknown> {
-    return this.httpClient.post(`${this.apiUrl}/cart/add/${id}`, {});
+  addToCart(userId: string, bike: Bike): Observable<unknown> {
+    console.log("CART", bike)
+    return this.httpClient.post(`${this.apiUrl}/cart/add`, bike);
   }
 
   getCart(): Observable<Cart> {
@@ -22,7 +24,7 @@ export class CartService {
   }
 
   deleteCartItem(id: number): Observable<unknown> {
-    return this.httpClient.post(`${this.apiUrl}/cart/deleteItem/${id}`, {});
+    return this.httpClient.post(`${this.apiUrl}/cart/delete/${id}`, {});
   }
 
   updateCartItemQuantity(id: number, type: 'increase' | 'decrease'): Observable<unknown> {

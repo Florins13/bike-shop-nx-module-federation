@@ -16,7 +16,7 @@ export interface ShippingAddress {
   zipCode: string;
 }
 
-export interface OrderItem {
+export interface OrderItem extends Bike {
   id: number;
   bike: Bike;
   quantity: number;

@@ -34,7 +34,7 @@ export class CartComponent implements OnInit, OnDestroy {
       const customEvent = event as CustomEvent;
       const bikeId = customEvent.detail;
       console.log('Received bikeId from event:', bikeId);
-      this.cartService.addToCart(bikeId).subscribe({
+      this.cartService.addToCart('basic-user', bikeId.bike).subscribe({
         next: () => {
           this.cartService.loadCart();
         },
@@ -45,7 +45,7 @@ export class CartComponent implements OnInit, OnDestroy {
     }
 
   cartTotal = computed(() =>
-    this.cartItems()?.cartItems.reduce((sum, item) => sum + item.bike.price * item.quantity, 0).toFixed(2)
+    this.cartItems()?.cartItems.reduce((sum, item) => sum + item.price * item.quantity, 0).toFixed(2)
   );
 
   cartIsEmpty = computed(() => this.cartItems()?.cartItems.length === 0);

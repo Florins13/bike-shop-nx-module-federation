@@ -5,6 +5,7 @@ dist
 tmp
 out-tsc
 /.vscode
+/nx-monorepo/.nx
 
 # dependencies
 node_modules

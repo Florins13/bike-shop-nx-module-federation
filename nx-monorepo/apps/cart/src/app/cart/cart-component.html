@@ -1,20 +1,19 @@
 <div style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: space-evenly; width: 250px;">
   Your Cart:
   @for (cartItem of cartItems()?.cartItems; track cartItem.id) {
+    {{"HEELO " + cartItem.id}}
     <div style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: space-evenly;">
       <div class="bike__box">
-        <p-button
+        <button
           icon="pi pi-times"
           severity="danger"
-          [text]="true"
-          [rounded]="true"
           size="small"
-          (onClick)="removeItem(cartItem.id)"
-        />
+          (click)="removeItem(cartItem.id)"
+        >X</button>
 
-        <h4 style="text-align: center;">Model: {{ cartItem.bike.model }}</h4>
-        <img [src]="cartItem.bike.imageSource" height="70" width="70" alt="{{ cartItem.bike.model }}">
-        <p-tag [value]="cartItem.bike.price + '€'" severity="info" />
+        <h4 style="text-align: center;">Model: {{ cartItem.model }}</h4>
+        <img [src]="cartItem.imageSource" height="70" width="70" alt="{{ cartItem.model }}">
+        <p-tag [value]="cartItem.price + '€'" severity="info" />
 
         <div style="display: flex; align-items: center; gap: 20px;">
           <p-button

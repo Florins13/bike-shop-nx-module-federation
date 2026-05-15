@@ -17,7 +17,7 @@
         <div style="display: flex; flex-direction: column; align-items: center; gap: 8px;">
           <img [src]="bike.imageSource" height="70" width="70" [alt]="bike.model">
           <p-tag [value]="bike.price + '€'" severity="info" />
-          <span>Stock: {{ bike.stock }}</span>
+          <span>Stock: {{ bike.availableStock }}</span>
           <span>{{ bike.details }}</span>
           @if (bike.electric) {
             <p-tag value="Electric" icon="pi pi-bolt" severity="success" />
@@ -30,7 +30,7 @@
               label="Add to cart"
               icon="pi pi-shopping-cart"
               (onClick)="addToCart(bike)"
-              [disabled]="bike.stock <= 0"
+              [disabled]="bike.availableStock <= 0"
               size="small"
             />
           }

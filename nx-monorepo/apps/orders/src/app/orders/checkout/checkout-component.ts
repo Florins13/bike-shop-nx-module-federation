@@ -16,11 +16,11 @@ export class CheckoutComponent implements OnInit {
   cartItems = computed(() => this.orderService.cartState()?.cartItems);
 
   cartTotal = computed(() =>
-    this.cartItems()?.reduce((sum, item) => sum + item.bike.price * item.quantity, 0)
+    this.cartItems()?.reduce((sum, item) => sum + item.price * item.quantity, 0)
   );
 
   rentTotal = computed(() =>
-    this.cartItems()?.reduce((sum, item) => sum + (item.bike.price * item.quantity * 0.3), 0)
+    this.cartItems()?.reduce((sum, item) => sum + (item.price * item.quantity * 0.3), 0)
   );
 
   acquireMode: 'buy' | 'rent' = 'buy';

@@ -42,7 +42,7 @@ export class BikeListComponent implements OnInit, OnDestroy{
   }
 
   addToCart(bike: Bike) {
-    window.dispatchEvent(new CustomEvent('add-to-cart', { detail: bike.id, bubbles: true, composed: true }));
+    window.dispatchEvent(new CustomEvent('add-to-cart', { detail: {bike}, bubbles: true, composed: true }));
     console.log(`Dispatched add-to-cart event for bike id: ${bike.id}`);
   }
 

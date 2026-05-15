@@ -33,7 +33,7 @@ export class CheckoutComponent implements OnInit {
       address: ['', Validators.required],
       telephone: ['', [Validators.required, Validators.pattern(/^[0-9]+$/)]],
       zipCode: ['', Validators.required],
-      acquire: [this.acquireMode]
+      acquireType: [this.acquireMode]
     });
 
   }
@@ -45,7 +45,7 @@ export class CheckoutComponent implements OnInit {
     if (this.checkoutForm.valid) {
       const orderRequest: OrderRequest = {
         shippingAddress: this.checkoutForm.value,
-        acquireType: this.acquireMode
+        acquireType: this.checkoutForm.value['acquireType']
       };
       this.orderService.finaliseOrder(orderRequest).subscribe({
         next: () => {

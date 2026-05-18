@@ -1,42 +1,42 @@
 <main style="padding: 20px;">
-  <div style="margin-bottom: 16px;">
-    <input
-      id="search"
-      [(ngModel)]="searchTerm"
+  <div style="margin-bottom:10px">
+    <label for="search">Search</label>
+    <input 
+      id="search" 
+      type="text" 
+      [(ngModel)]="searchTerm" 
       placeholder="Search bikes..."
-      style="width: 100%; padding: 8px 12px; border: 1px solid #ccc; border-radius: 4px; font-size: 14px; box-sizing: border-box;"
-    />
+    >
   </div>
 
   <div style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: space-evenly;">
     @for (bike of filteredBikes(); track bike.id) {
-      <div style="width: 250px; border: 1px solid #ddd; border-radius: 6px; overflow: hidden; background: #fff;">
-        <div style="padding: 12px 16px; font-weight: 600; font-size: 15px; border-bottom: 1px solid #eee;">
-          {{ bike.model }}
-        </div>
-        <div style="display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 16px;">
-          <img [src]="bike.imageSource" height="70" width="70" [alt]="bike.model">
-          <span style="background: #1a1a2e; color: #fff; padding: 2px 10px; border-radius: 3px; font-size: 13px; font-weight: 600;">
-            {{ bike.price }} €
-          </span>
-          <span style="font-size: 13px; color: #666;">Stock: {{ bike.availableStock }}</span>
-          <span style="font-size: 13px; color: #444; text-align: center;">{{ bike.details }}</span>
-          @if (bike.electric) {
-            <span style="background: #2d6a4f; color: #fff; padding: 2px 10px; border-radius: 3px; font-size: 12px;">
-              ⚡ Electric
-            </span>
-          }
-        </div>
-        <div style="padding: 12px 16px; border-top: 1px solid #eee;">
-          <button
-            (click)="addToCart(bike)"
+      <div class="bike__box">
+        <h4>Model: {{ bike.model }}</h4>
+        <img [src]="bike.imageSource" height="70" width="70" alt="{{ bike.model }}">
+        <span>Stock: {{ bike.availableStock }}</span>
+        <span>Details: {{ bike.details }}</span>
+        <span>Electric: {{ bike.electric ? 'Yes' : 'No' }}</span>
+        <span>Price: {{ bike.price }}€</span>
+
+
+          <button 
+            (click)="addToCart(bike)" 
             [disabled]="bike.availableStock <= 0"
-            style="width: 100%; padding: 8px; background: #e94560; color: #fff; border: none; border-radius: 4px; cursor: pointer; font-size: 14px; font-weight: 500;"
           >
-            🛒 Add to cart
+            Add to cart
           </button>
-        </div>
+
+
+        <!-- @if (role === 'MANAGER') {
+          <div style="display: flex; gap: 10px;">
+            <button (click)="editBike(bike)">Edit</button>
+            <button (click)="deleteBike(bike)">Delete</button>
+          </div>
+        } -->
       </div>
     }
   </div>
 </main>
+
+

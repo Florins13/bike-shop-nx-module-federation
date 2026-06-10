@@ -14,17 +14,17 @@
 
   <nav class="nav-style" style="display: flex; align-items: center;">
     
-    @if (role === 'BASIC') {
-      <div>
-        <img (click)="goToOrders()" src="orders.png" alt="Orders">
-      </div>
+    <!-- @if (role === 'BASIC') { -->
       <div>
         <img (click)="goToCart()" src="shopping-cart.png" alt="Cart">
       </div>
       <div>
+        <img (click)="goToOrders()" src="orders.png" alt="Orders">
+      </div>
+      <div>
         <img (click)="logOut()" src="logout.png" alt="Logout">
       </div>
-    } @else if (role === 'MANAGER') {
+    <!-- } @else if (role === 'MANAGER') {
       <div>
         <img (click)="logOut()" src="logout.png" alt="Logout">
       </div>
@@ -35,7 +35,7 @@
       <div>
         <img src="add-user.png" alt="Register">
       </div>
-    }
+    } -->
 
   </nav>
 </header>

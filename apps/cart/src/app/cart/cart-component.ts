@@ -46,7 +46,7 @@ export class CartComponent implements OnInit, OnDestroy {
     this.cartItems()?.cartItems.reduce((sum, item) => sum + item.price * item.quantity, 0).toFixed(2)
   );
 
-  cartIsEmpty = computed(() => this.cartItems()?.cartItems.length === 0);
+  cartIsEmpty = computed(() => this.cartItems()?.cartItems.some(item => item.quantity !== 0));
 
   removeItem(id: number) {
     this.cartService.deleteCartItem(id).subscribe({
@@ -73,6 +73,6 @@ export class CartComponent implements OnInit, OnDestroy {
   }
 
   goToCheckout() {
-    this.router.navigate(['/checkout']);
+    window.location.href = '/checkout'
   }
 }

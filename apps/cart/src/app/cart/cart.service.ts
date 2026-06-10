@@ -16,7 +16,7 @@ export class CartService {
 
   addToCart(userId: string, bike: Bike): Observable<unknown> {
     console.log("CART", bike)
-    return this.httpClient.post(`${this.apiUrl}/cart/add`, bike);
+    return this.httpClient.post(`${this.apiUrl}/cart/add/${bike.id}`, {});
   }
 
   getCart(): Observable<Cart> {

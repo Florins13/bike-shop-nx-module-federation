@@ -1,0 +1,17 @@
+node_modules
+dist
+tmp
+out-tsc
+coverage
+.nx/cache
+.nx/workspace-data
+.angular
+.git
+.github
+.vscode
+.idea
+.DS_Store
+**/*.log
+Dockerfile
+docker-compose.yml
+.dockerignore

@@ -1,0 +1,61 @@
+# Runs only the Module Federation microfrontends (shell + remotes) as static
+# nginx containers. Ports match the URLs baked into the production shell build:
+#   shell  -> http://localhost:4200 (host)
+#   cart   -> http://localhost:4201 (remote)
+#   bikes  -> http://localhost:4202 (remote)
+#   orders -> http://localhost:4203 (remote)
+#
+# Usage:
+#   docker compose up --build
+services:
+  shell:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        APP: shell
+    image: bike-shop/shell
+    container_name: bike-shop-shell
+    ports:
+      - "4200:80"
+    depends_on:
+      - cart
+      - bikes
+      - orders
+    restart: unless-stopped
+
+  cart:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        APP: cart
+    image: bike-shop/cart
+    container_name: bike-shop-cart
+    ports:
+      - "4201:80"
+    restart: unless-stopped
+
+  bikes:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        APP: bikes
+    image: bike-shop/bikes
+    container_name: bike-shop-bikes
+    ports:
+      - "4202:80"
+    restart: unless-stopped
+
+  orders:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        APP: orders
+    image: bike-shop/orders
+    container_name: bike-shop-orders
+    ports:
+      - "4203:80"
+    restart: unless-stopped
